@@ -1,4 +1,9 @@
-# Maya Sekhon - DevOps Zero-Hero Tutorial
+# Maya Sekhon - DevOps Zero-Hero Tutorial 
+
+## Index
+
+- [Linux Basics](https://github.com/MayaSekhon/DevOps-Tutorial/tree/main#linux-basics)
+- [Command Basics](https://github.com/MayaSekhon/DevOps-Tutorial/tree/main#command-basics)
 
 ## Linux Basics
 
