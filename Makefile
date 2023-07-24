@@ -1,4 +1,7 @@
 # this is what executes if no argument is given
+lint:
+	mdl README.md
+
 readme:
 	mdl README.md
 	git add README.md
