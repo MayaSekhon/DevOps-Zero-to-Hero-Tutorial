@@ -11,5 +11,5 @@ makefile:
 	git add Makefile
 	git commit -m "Updated makefile" Makefile
 	git push
-    open https://github.com/MayaSekhon/DevOps-Tutorial/blob/main/Makefile
+	open https://github.com/MayaSekhon/DevOps-Tutorial/blob/main/Makefile
 
