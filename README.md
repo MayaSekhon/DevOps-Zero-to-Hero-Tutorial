@@ -63,6 +63,10 @@ export PATH="$PATH:/path/to/some/directory"
 - `pbcopy` - copies Standard Input to the GUI clipboard on Mac
 - `pbpaste` - pastes the GUI clipboard to Standard Output on Mac
 - `xclip` -  copies Standard Input to the GUI (X) clipboard on Linux
+- `mkdir` -  creates a directory
+- `rmdir` - deletes an empty directory, fails with an error if not empty, in which case you need to use `rm -r` to also delete the directory and its contents (files / subdirectories)
+- `rm` - deletes files / directories. Common switches are `-r` to recursively delete into directories, and `-f`/`--force` 
+
 
 ## SSH
 
