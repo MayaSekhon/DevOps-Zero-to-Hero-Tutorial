@@ -51,7 +51,8 @@ This combined with the rich ecosystem of bundled Unix commands is the true power
 
 ## Linux / Unix - Basic Commands
 
-To find a command, it must be in the `$PATH`. You will likely need to extend the path to include custom installation directories like so: 
+To find a command, it must be in the `$PATH`. You will likely need to extend the path to include custom installation directories like so:
+
 ```shell
 export PATH="$PATH:/path/to/some/directory"
 ```
