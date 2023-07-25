@@ -55,6 +55,18 @@ ssh maya@somecomputer.domain.com
 ssh maya@192.168.1.2
 ```
 
+Create an ssh key
+```shell
+ssh-keygen
+```
+This generates a public and private key pair under `$HOME/.ssh/`,
+by default `id_rsa` for the secret private key and `id_rsa.pub` for the public key.
+
+Copy and paste the public key contents from `$HOME/.ssh/id_rsa.pub` into the `$HOME/.ssh/authorized_keys`
+in any computer you want to automatically log into without a password prompt, or any public service like GitHub. 
+
+The public key is safe to send to colleagues via emails etc because you cannot derive the secret private key from it due to one-way asymmetric cryptography, so that they can add you into their servers authorised keys.
+
 ## Editor / IDE
 
 Get yourself a good IDE (text editor with fancy features like autocomplete, syntax highlighting, version control etc.)
@@ -99,5 +111,7 @@ git push
 
 [GitHub](https://github.com/) is a website which stores your Git repositories and has nice management features as well as CI/CD.
 
+Copy and paste the contents of your `$HOME/.ssh/id_rsa.pub` into your profile [settings](https://github.com/settings/keys)
+(hint: `pbcopy $HOME/.ssh/id_rsa.pub` on Mac to copy it straight into your clipboard) 
 
 
