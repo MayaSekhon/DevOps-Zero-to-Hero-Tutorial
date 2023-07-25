@@ -98,6 +98,8 @@ in the current directory when you execute the `make` command.
 
 For example, see the [Makefile](https://github.com/MayaSekhon/DevOps-Tutorial/blob/main/Makefile) in this repo.
 
+If you're using Intellij, remember to add the [Makefile plugin](https://plugins.jetbrains.com/plugin/9333-makefile-language) for syntax support.
+
 ## Git
 
 [Git](https://git-scm.com/) is a distributed version control system which saves every version of your software code and configuration files.
