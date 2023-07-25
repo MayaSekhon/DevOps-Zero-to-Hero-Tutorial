@@ -15,7 +15,7 @@
 
 Linux is the standard open source operating system, based on Unix design.
 
-Linux is technically just the operating system kernel, while the many command line tools called Core Utils are typically provided by [GNU](https://www.gnu.org/home.en.html). 
+Linux is technically just the operating system kernel, while the many command line tools called Core Utils are typically provided by [GNU](https://www.gnu.org/home.en.html).
 Together they form a complete operating system called GNU / Linux which is further wrapped by Linux distributions
 which include easy installers and commands to download and install further software (software package management).
 The most popular Linux distributions include
@@ -36,7 +36,7 @@ There should be no other account with UID 0 otherwise it would also be a root su
 
 ### Standard Input, Standard Output and Standard Error
 
-Standard Input is the data input that is streamed into any command via an interactive prompt, or a pipe (`|`) from another command, or an input redirect (`<`) from a file. 
+Standard Input is the data input that is streamed into any command via an interactive prompt, or a pipe (`|`) from another command, or an input redirect (`<`) from a file.
 Commands that expect standard input like `cat` or `grep`, if not given file arguments, will hang waiting until they receive some input.
 
 Standard Output is the main output stream from any command that is printed to the terminal unless you redirect it into a pipe (`|`) to another command's Standard Input, or an output redirect (`>`/ `>>`) to a file.
@@ -73,7 +73,7 @@ Common switches are `-h` / `--help`, `-v` / `--verbose`, `-V` / `--version`. The
 - `grep` - filters from standard input or a file and only prints to standard output lines that match the given regex filter argument
 - `netstat` - prints the network connections, connected or listening ports. Commonly called as `netstat -an` or `netstat -lntpu`
 - `more` - a paging program that displays one screenfull at a time and allows you to scroll down through longer outputs such as standard output from piped commands or files
-- `less` - a better replacement of `more` that allows you to scroll upwards as well as downwards 
+- `less` - a better replacement of `more` that allows you to scroll upwards as well as downwards
 - `pbcopy` - copies Standard Input to the GUI clipboard on Mac
 - `pbpaste` - pastes the GUI clipboard to Standard Output on Mac
 - `xclip` -  copies Standard Input to the GUI (X) clipboard on Linux
@@ -178,4 +178,3 @@ Use SSH for your git clone / pull / push because you should be using autogenerat
 / [1password](https://1password.com/), and have MFA enabled.
 
 If your organisation uses SSO enforced authentication for corporate controls via Azure Active Directory or similar IdP, then don't forget to authorize your SSH key for your enterprise GitHub organisation using the `Configure SSO` drop down to the right of the key.
-
