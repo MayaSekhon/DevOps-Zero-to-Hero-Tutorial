@@ -33,7 +33,7 @@ There should be no other account with UID 0 otherwise it would also be a root su
 
 ## Git
 
-Git is a distributed version control system which saves every version of your software code and configuration files.
+[Git](https://git-scm.com/) is a distributed version control system which saves every version of your software code and configuration files.
 
 This allows you to track all changes made over time made by yourself and your colleagues, and handles most merging
 of each other's changes as long as they're not on the same lines. 
@@ -67,5 +67,5 @@ git push
 
 ### GitHub
 
-GitHub is a website which stores your Git repositories and has nice management features as well as CI/CD.
+[GitHub](https://github.com/) is a website which stores your Git repositories and has nice management features as well as CI/CD.
 
