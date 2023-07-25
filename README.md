@@ -40,6 +40,11 @@ This combined with the rich ecosystem of bundled Unix commands is the true power
 
 ## Linux / Unix - Basic Commands
 
+To find a command, it must be in the `$PATH`. You will likely need to extend the path to include custom installation directories like so: 
+```shell
+export PATH="$PATH:/path/to/some/directory"
+```
+
 - `pwd` - shows present working directory
 - `cd` - change directory
 - `ls -l` - list files and directories
@@ -90,6 +95,11 @@ The public key is safe to send to colleagues via emails etc because you cannot d
 Get yourself a good IDE (text editor with fancy features like autocomplete, syntax highlighting, version control etc.)
 
 There are many to choose from, if you don't already have a favourite one just go with [Intellij IDEA](https://www.jetbrains.com/idea/) community edition (free).
+
+If you're on Mac and want to be able to open files from the command line using the `idea` command from your shell, you will need to add it to the path: 
+```shell
+export PATH="$PATH:/Applications/IntelliJ IDEA CE.app/Contents/MacOS"
+```
 
 ## Make / Makefiles
 
