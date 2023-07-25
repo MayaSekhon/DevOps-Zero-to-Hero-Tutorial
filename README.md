@@ -5,7 +5,6 @@
 [![Repo on GitLab](https://img.shields.io/badge/repo-GitLab-FCA121?logo=gitlab)](https://gitlab.com/MayaSekhon/DevOps-Tutorial)
 [![Repo on BitBucket](https://img.shields.io/badge/repo-BitBucket-0052CC?logo=bitbucket)](https://bitbucket.org/mayasekhon/devops-tutorial/src/main/)
 
-
 ## Index
 
 - [Linux Basics](https://github.com/MayaSekhon/DevOps-Tutorial/tree/main#linux-basics)
@@ -37,6 +36,20 @@ There should be no other account with UID 0 otherwise it would also be a root su
 - `su` - switch user, prompts for the user's password to start a new shell under their username
 - `which` - prints the full path to a given command
 
+## SSH
+
+SSH stands for Secure Shell. It is the standard for connecting into remote shells on other computers across the network. 
+The connection is encrypted on port 22 and requires a remote username and password or SSH key.
+An SSH server must be running on the remote computer (`sshd`).
+
+```shell
+ssh maya@somecomputer.domain.com
+```
+
+```shell
+ssh maya@192.168.1.2
+```
+
 ## Editor / IDE
 
 Get yourself a good IDE (text editor with fancy features like autocomplete, syntax highlighting, version control etc.)
@@ -64,7 +77,7 @@ of each other's changes as long as they're not on the same lines.
 
 #### Example
 
-```
+```shell
 git init
 git add README.md
 git commit -m "added readme" 
