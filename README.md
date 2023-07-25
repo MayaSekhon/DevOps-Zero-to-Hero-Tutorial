@@ -91,6 +91,13 @@ Get yourself a good IDE (text editor with fancy features like autocomplete, synt
 
 There are many to choose from, if you don't already have a favourite one just go with [Intellij IDEA](https://www.jetbrains.com/idea/) community edition (free).
 
+## Make / Makefiles
+
+Make is the classic, standard build system that executes the script contents of `Makefile`
+in the current directory when you execute the `make` command.
+
+For example, see the [Makefile](https://github.com/MayaSekhon/DevOps-Tutorial/blob/main/Makefile) in this repo.
+
 ## Git
 
 [Git](https://git-scm.com/) is a distributed version control system which saves every version of your software code and configuration files.
