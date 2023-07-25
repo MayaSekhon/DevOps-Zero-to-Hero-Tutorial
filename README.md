@@ -30,3 +30,40 @@ There should be no other account with UID 0 otherwise it would also be a root su
 - `sudo` - elevate permissions to another user, usually root (must be pre-approved in `/etc/sudoers`)
 - `su` - switch user, prompts for the user's password to start a new shell under their username
 - `which` - prints the full path to a given command
+
+## Git
+
+Git is a distributed version control system which saves every version of your software code and configuration files.
+
+This allows you to track all changes made over time made by yourself and your colleagues, and handles most merging
+of each other's changes as long as they're not on the same lines. 
+
+### Git Commands
+
+- `git init` - creates a new Git repository (creates `.git/` directory storing your file changes and metadata)
+- `git add` - marks files to be committed
+- `git diff` - shows you uncommitted changes made to files
+- `git commit` - saves selected changed files in a new version hashref
+   (a unique alphanumeric string representing this set of changes)
+- `git push` - pushes your local commits to an upstream shared repository such as GitHub
+- `git pull` - pulls the latest commits from the upstream shared repository
+
+#### Example
+
+```
+git init
+git add README.md
+git commit -m "added readme" 
+
+# edit file
+vim README.md
+
+git diff
+git commit -m "updated readme"
+git push
+```
+
+### GitHub
+
+GitHub is a website which stores your Git repositories and has nice management features as well as CI/CD.
+
