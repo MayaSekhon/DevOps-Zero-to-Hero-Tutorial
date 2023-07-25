@@ -48,6 +48,8 @@ of each other's changes as long as they're not on the same lines.
 - `git push` - pushes your local commits to an upstream shared repository such as GitHub
 - `git pull` - pulls the latest commits from the upstream shared repository
 
+`.gitignore` - file listing paths to ignore, one per line, can be set globally in your home directory or in the root top level directory of the repository
+
 #### Example
 
 ```
