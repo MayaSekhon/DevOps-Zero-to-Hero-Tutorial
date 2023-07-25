@@ -49,6 +49,21 @@ Most Unix commands often work as standard Unix filter programs where they can ac
 
 This combined with the rich ecosystem of bundled Unix commands is the true power of Unix shells.
 
+## Networking Basics
+
+- IP address - the unique address of the computer / device on a network. Most computers are still using IPv4 addresses in the format `1.2.3.4`, with the eventual intention of migrating to IPv6
+- Subnet mask / netmask - an address that when AND'd against the IP address, leaves just the network portion of the IP address
+- Network address - the IP address range, used by every device to determine if the remote IP is on the local network or a remote network 
+- Switch - device with multiples ports connecting different computers on the local network
+- Router - device which connects 2 or more networks together
+- Gateway - a router that is sent traffic to forward on to other networks
+- Default Gateway - the router that you send all your remote traffic to when you don't have a more specific router to send it to e.g. your home broadband router for all traffic going to the internet
+- DNS - Domain Name System -  software that translates host names and domain names into IP addresses for network connections to initiate. Every computer has a DNS client that queries DNS servers on the internet that is used everytime you put a URL into your web browser
+- Hostname - the name of your computer on the local network
+- Domain Name - the address suffix used to group websites and email addresses eg. google.com 
+- FQDN - Fully Qualified Domain Name - the complete host name and domain address eg. www.google.com
+- URL - Uniform Resource Locator - the full path to a website's webpage eg. https://linkedin.com/in/maya-sekhon
+
 ## Linux / Unix - Basic Commands
 
 To find a command, it must be in the `$PATH`. You will likely need to extend the path to include custom installation directories like so:
@@ -62,18 +77,22 @@ Common switches are `-h` / `--help`, `-v` / `--verbose`, `-V` / `--version`. The
 - `pwd` - shows present working directory
 - `cd` - change directory
 - `ls -l` - list files and directories
-- `cat` - reads the contents of the file to the terminal
 - `echo` - prints a given string argument
+- `cat` - reads the contents of the file or standard input to standard output, your terminal if not redirected or piped to another command
+- `head` - reads the first N lines of a file or standard input
+- `tail` - reads the last N lines of a file or standard input
+- `more` - a paging program that displays one screenfull at a time and allows you to scroll down through longer outputs such as standard output from piped commands or files
+- `less` - a better replacement of `more` that allows you to scroll upwards as well as downwards
 - `>` -  overwrite file
 - `>>` - append file
 - `sudo` - elevate permissions to another user, usually root (must be pre-approved in `/etc/sudoers`)
 - `su` - switch user, prompts for the user's password to start a new shell under their username
 - `which` - prints the full path to a given command
 - `ps` -  shows running processes. Commonly called as `ps -ef` or `ps aux` to show all processes on a unix based system
-- `grep` - filters from standard input or a file and only prints to standard output lines that match the given regex filter argument
+-`grep` - filters from standard input or a file and only prints to standard output lines that match the given regex filter argument
+- `hostname` - prints the hostname with domain (FQDN), use `-s` for short name without domain
 - `netstat` - prints the network connections, connected or listening ports. Commonly called as `netstat -an` or `netstat -lntpu`
-- `more` - a paging program that displays one screenfull at a time and allows you to scroll down through longer outputs such as standard output from piped commands or files
-- `less` - a better replacement of `more` that allows you to scroll upwards as well as downwards
+
 - `pbcopy` - copies Standard Input to the GUI clipboard on Mac
 - `pbpaste` - pastes the GUI clipboard to Standard Output on Mac
 - `xclip` -  copies Standard Input to the GUI (X) clipboard on Linux
