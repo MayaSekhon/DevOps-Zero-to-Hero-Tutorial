@@ -79,12 +79,11 @@ Common switches are `-h` / `--help`, `-v` / `--verbose`, `-V` / `--version`. The
 - `xclip` -  copies Standard Input to the GUI (X) clipboard on Linux
 - `mkdir` -  creates a directory
 - `rmdir` - deletes an empty directory, fails with an error if not empty, in which case you need to use `rm -r` to also delete the directory and its contents (files / subdirectories)
-- `rm` - deletes files / directories. Common switches are `-r` to recursively delete into directories, and `-f`/`--force` 
-
+- `rm` - deletes files / directories. Common switches are `-r` to recursively delete into directories, and `-f`/`--force`
 
 ## SSH
 
-SSH stands for Secure Shell. It is the standard for connecting into remote shells on other computers across the network. 
+SSH stands for Secure Shell. It is the standard for connecting into remote shells on other computers across the network.
 The connection is encrypted on port 22 and requires a remote username and password or SSH key.
 An SSH server must be running on the remote computer (`sshd`).
 
@@ -97,14 +96,16 @@ ssh maya@192.168.1.2
 ```
 
 Create an ssh key
+
 ```shell
 ssh-keygen
 ```
+
 This generates a public and private key pair under `$HOME/.ssh/`,
 by default `id_rsa` for the secret private key and `id_rsa.pub` for the public key.
 
 Copy and paste the public key contents from `$HOME/.ssh/id_rsa.pub` into the `$HOME/.ssh/authorized_keys`
-in any computer you want to automatically log into without a password prompt, or any public service like GitHub. 
+in any computer you want to automatically log into without a password prompt, or any public service like GitHub.
 
 The public key is safe to send to colleagues via emails etc because you cannot derive the secret private key from it due to one-way asymmetric cryptography, so that they can add you into their servers authorised keys.
 
@@ -114,7 +115,8 @@ Get yourself a good IDE (text editor with fancy features like autocomplete, synt
 
 There are many to choose from, if you don't already have a favourite one just go with [Intellij IDEA](https://www.jetbrains.com/idea/) community edition (free).
 
-If you're on Mac and want to be able to open files from the command line using the `idea` command from your shell, you will need to add it to the path: 
+If you're on Mac and want to be able to open files from the command line using the `idea` command from your shell, you will need to add it to the path:
+
 ```shell
 export PATH="$PATH:/Applications/IntelliJ IDEA CE.app/Contents/MacOS"
 ```
@@ -133,7 +135,7 @@ If you're using Intellij, remember to add the [Makefile plugin](https://plugins.
 [Git](https://git-scm.com/) is a distributed version control system which saves every version of your software code and configuration files.
 
 This allows you to track all changes made over time made by yourself and your colleagues, and handles most merging
-of each other's changes as long as they're not on the same lines. 
+of each other's changes as long as they're not on the same lines.
 
 ### Git Commands
 
@@ -146,7 +148,7 @@ of each other's changes as long as they're not on the same lines.
 - `git push` - pushes your local commits to an upstream shared repository such as GitHub
 - `git pull` - pulls the latest commits from the upstream shared repository
 - `git branch` - show branches / create a new branch
-- `git checkout` - checks out the files at a given ref (branch / tag / hashref) 
+- `git checkout` - checks out the files at a given ref (branch / tag / hashref)
 - `git remote -v` - prints the remote repos and their URLs
 
 `.gitignore` - file listing paths to ignore, one per line, can be set globally in your home directory or in the root top level directory of the repository
@@ -156,7 +158,7 @@ of each other's changes as long as they're not on the same lines.
 ```shell
 git init
 git add README.md
-git commit -m "added readme" 
+git commit -m "added readme"
 
 # edit file
 vim README.md
