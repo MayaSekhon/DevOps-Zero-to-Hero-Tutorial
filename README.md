@@ -35,6 +35,11 @@ There should be no other account with UID 0 otherwise it would also be a root su
 - `sudo` - elevate permissions to another user, usually root (must be pre-approved in `/etc/sudoers`)
 - `su` - switch user, prompts for the user's password to start a new shell under their username
 - `which` - prints the full path to a given command
+- `ps` -  shows running processes. Commonly called as `ps -ef` or `ps aux` to show all processes on a unix based system
+- `grep` - filters from standard input or a file and only prints to standard output lines that match the given regex filter argument
+- `netstat` - prints the network connections, connected or listening ports. Commonly called as `netstat -an` or `netstat -lntpu`
+- `more` - a paging program that displays one screenfull at a time and allows you to scroll down through longer outputs such as standard output from piped commands or files
+- `less` - a better replacement of `more` that allows you to scroll upwards as well as downwards 
 
 ## SSH
 
