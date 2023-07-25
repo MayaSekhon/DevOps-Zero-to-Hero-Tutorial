@@ -14,9 +14,19 @@
 
 Linux is the standard open source operating system, based on Unix design.
 
-Everything is a file on Linux, even devices. Each open file gets its own file descriptor path.
+Linux is technically just the operating system kernel, while the many command line tools called Core Utils are typically provided by [GNU](https://www.gnu.org/home.en.html). 
+Together they form a complete operating system called GNU / Linux which is further wrapped by Linux distributions
+which include easy installers and commands to download and install further software (software package management).
+The most popular Linux distributions include
+[Redhat](https://www.redhat.com/en)
+, [Debian](https://www.debian.org/)
+and [Ubuntu](https://ubuntu.com/)
+or are based on one of those.
+There are many more Linux distributions that fill specific niches.
 
-The Linux command line is extremely powerful and there are several shells to choose from.
+Everything is a file on Unix, even devices. Each open file gets its own file descriptor path.
+
+The Unix command line is extremely powerful and there are several shells to choose from.
 The default shell is Bash, which is based on the Bourne shell (Bash stands for Bourne again shell).
 Other popular shells include ZSH and Fish.
 
@@ -44,6 +54,8 @@ To find a command, it must be in the `$PATH`. You will likely need to extend the
 ```shell
 export PATH="$PATH:/path/to/some/directory"
 ```
+
+Common switches are `-h` / `--help`, `-v` / `--verbose`, `-V` / `--version`. The long options with `--` are typically GNU convention
 
 - `pwd` - shows present working directory
 - `cd` - change directory
@@ -124,12 +136,16 @@ of each other's changes as long as they're not on the same lines.
 ### Git Commands
 
 - `git init` - creates a new Git repository (creates `.git/` directory storing your file changes and metadata)
+- `git clone` - clones a repo locally from an upstream server, such as GitHub
 - `git add` - marks files to be committed
 - `git diff` - shows you uncommitted changes made to files
 - `git commit` - saves selected changed files in a new version hashref
    (a unique alphanumeric string representing this set of changes)
 - `git push` - pushes your local commits to an upstream shared repository such as GitHub
 - `git pull` - pulls the latest commits from the upstream shared repository
+- `git branch` - show branches / create a new branch
+- `git checkout` - checks out the files at a given ref (branch / tag / hashref) 
+- `git remote -v` - prints the remote repos and their URLs
 
 `.gitignore` - file listing paths to ignore, one per line, can be set globally in your home directory or in the root top level directory of the repository
 
