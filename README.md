@@ -31,6 +31,12 @@ There should be no other account with UID 0 otherwise it would also be a root su
 - `su` - switch user, prompts for the user's password to start a new shell under their username
 - `which` - prints the full path to a given command
 
+## Editor / IDE
+
+Get yourself a good IDE (text editor with fancy features like autocomplete, syntax highlighting, version control etc.)
+
+There are many to choose from, if you don't already have a favourite one just go with [Intellij IDEA](https://www.jetbrains.com/idea/) community edition (free).
+
 ## Git
 
 [Git](https://git-scm.com/) is a distributed version control system which saves every version of your software code and configuration files.
