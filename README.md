@@ -78,6 +78,8 @@ Common switches are `-h` / `--help`, `-v` / `--verbose`, `-V` / `--version`. The
 - `cd` - change directory
 - `ls -l` - list files and directories
 - `echo` - prints a given string argument
+- `cp` - copies files or directories
+- `mv` - moves files or directories
 - `cat` - reads the contents of the file or standard input to standard output, your terminal if not redirected or piped to another command
 - `head` - reads the first N lines of a file or standard input
 - `tail` - reads the last N lines of a file or standard input
