@@ -1,4 +1,4 @@
-# Maya Sekhon - DevOps Zero-Hero Tutorial
+# Maya Sekhon - DevOps Zero-to-Hero Tutorial
 
 [![README lint](https://github.com/MayaSekhon/DevOps-Tutorial/actions/workflows/readme-lint.yaml/badge.svg)](https://github.com/MayaSekhon/DevOps-Tutorial/actions/workflows/readme-lint.yaml)
 [![URL lint](https://github.com/MayaSekhon/DevOps-Tutorial/actions/workflows/url-lint.yaml/badge.svg)](https://github.com/MayaSekhon/DevOps-Tutorial/actions/workflows/url-lint.yaml)
@@ -14,9 +14,11 @@
 ## Index
 
 - [Linux / Unix Basics](#linux--unix-basics)
+  - [Unix File System Layout](#unix-file-system-layout)
+  - [Unix Shells](#unix-shells)
   - [Standard Input, Standard Output and Standard Error](#standard-input-standard-output-and-standard-error)
-- [Networking Basics](#networking-basics)
 - [Linux / Unix - Basic Commands](#linux--unix---basic-commands)
+- [Networking Basics](#networking-basics)
 - [SSH](#ssh)
 - [Editor / IDE](#editor--ide)
 - [Make / Makefiles](#make--makefiles)
@@ -24,7 +26,11 @@
   - [Git Commands](#git-commands)
     - [Example](#example)
   - [GitHub](#github)
+  - [GitHub alternatives - GitLab, BitBucket, Azure DevOps](#github-alternatives---gitlab-bitbucket-azure-devops)
 - [CI/CD - Continuous Integration / Continuous Delivery](#cicd---continuous-integration--continuous-delivery)
+  - [GitHub Actions](#github-actions)
+  - [Azure DevOps Pipelines](#azure-devops-pipelines)
+  - [CircleCI](#circleci)
 - [Data Formats](#data-formats)
 
 ## Linux / Unix Basics
