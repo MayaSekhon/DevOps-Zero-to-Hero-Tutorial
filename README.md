@@ -9,8 +9,19 @@
 
 ## Index
 
-- [Linux Basics](https://github.com/MayaSekhon/DevOps-Tutorial/tree/main#linux-basics)
-- [Command Basics](https://github.com/MayaSekhon/DevOps-Tutorial/tree/main#command-basics)
+- [Linux / Unix Basics](#linux--unix-basics)
+  - [Standard Input, Standard Output and Standard Error](#standard-input-standard-output-and-standard-error)
+- [Networking Basics](#networking-basics)
+- [Linux / Unix - Basic Commands](#linux--unix---basic-commands)
+- [SSH](#ssh)
+- [Editor / IDE](#editor--ide)
+- [Make / Makefiles](#make--makefiles)
+- [Git](#git)
+  - [Git Commands](#git-commands)
+    - [Example](#example)
+  - [GitHub](#github)
+- [CI/CD - Continuous Integration / Continuous Delivery](#cicd---continuous-integration--continuous-delivery)
+- [Data Formats](#data-formats)
 
 ## Linux / Unix Basics
 
@@ -228,7 +239,7 @@ There are many different CI/CD software tools available to fulfill this function
 
 and many others. For a more comprehensive list of badges of different CI, see [HariSekhon/CI-CD](https://github.com/HariSekhon/CI-CD) or https://harisekhon.netlify.app/.
 
-## Data Formats 
+## Data Formats
 
 - [YAML](https://en.wikipedia.org/wiki/YAML) - Yet Another Markup Language - simple way of representing key value pairs, lists, dictionaries. Usually used for config files eg. [readme-lint.yaml](https://github.com/MayaSekhon/DevOps-Tutorial/blob/main/.github/workflows/readme-lint.yaml)
 - [JSON](https://en.wikipedia.org/wiki/JSON) - JavaScript Object Notation - text-based data file written like a dictionary in code with braces, key-value pairs, lists, often used for data interchange between web services eg. `{ "name": "Maya", "hobbies": ["coding", "music"] }`
