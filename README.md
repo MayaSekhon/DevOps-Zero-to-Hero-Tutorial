@@ -90,7 +90,7 @@ export PATH="$PATH:/path/to/some/directory"
 Common switches are `-h` / `--help`, `-v` / `--verbose`, `-V` / `--version`. The long options with `--` are typically GNU convention
 
 - `pwd` - shows present working directory
-- `cd` - change directory
+- `cd` - change directory, `cd -` to jump to last directory, `cd` without args to jump to `$HOME` directory
 - `ls -l` - list files and directories
 - `echo` - prints a given string argument
 - `cp` - copies files or directories
@@ -274,7 +274,8 @@ For examples, see [.github/workflows](https://github.com/MayaSekhon/DevOps-Tutor
 
 ### Azure DevOps Pipelines
 
-Azure DevOps 
+Azure DevOps Pipelines is the built-in CI/CD available alongside repos. Simply add `azure-pipelines.yml` to the root of your repo and enable in the website.
+For a simple example, see the local [azure-pipelines.yml](/azure-pipelines.yml), for a more real-world example, see [HariSekhon/DevOps-Bash-tools](https://github.com/HariSekhon/DevOps-Bash-tools)'s [azure-pipelines.yml](https://github.com/HariSekhon/DevOps-Bash-tools/blob/master/azure-pipelines.yml).
 
 ## Data Formats
 
