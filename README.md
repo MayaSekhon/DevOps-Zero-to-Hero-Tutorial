@@ -273,6 +273,8 @@ CI/CD built into each GitHub repo, requires just dropping in a yaml file into `.
 
 For examples, see [.github/workflows](https://github.com/MayaSekhon/DevOps-Tutorial/tree/main/.github/workflows).
 
+For a master template, see the [HariSekhon/GitHub-Actions](https://github.com/HariSekhon/GitHub-Actions) repo [main.yaml](https://github.com/HariSekhon/GitHub-Actions/blob/master/main.yaml).
+
 ### Azure DevOps Pipelines
 
 Azure DevOps Pipelines is the built-in CI/CD available alongside repos. Simply add `azure-pipelines.yml` to the root of your repo and enable in the website.
