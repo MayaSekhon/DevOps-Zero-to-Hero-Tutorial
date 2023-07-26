@@ -44,7 +44,7 @@ There are many more Linux distributions that fill specific niches.
 ### Unix File System Layout
 
 - `/bin` - core binaries
-- `/usr/bin` - more user binaries 
+- `/usr/bin` - more user binaries
 - `/sbin` - system binaries
 - `/usr/sbin` - more system binaries
 - `/usr/local/bin` - 3rd party installed user binaries
@@ -53,7 +53,7 @@ There are many more Linux distributions that fill specific niches.
 - `/usr/local/etc` - 3rd party installed config files
 - `/tmp` - temporary files (often wiped after shutdown)
 - `/var/tmp` - more temporary runtime files
-- `/var/cache` - temporarily cached files for running software, package manager lists 
+- `/var/cache` - temporarily cached files for running software, package manager lists
 - `/dev` - device files representing every piece of hardware, disk, device, usb etc.
 - `/home` - home directories for each user
 - `/User` - home directories for each user on Mac instead of `/home`
