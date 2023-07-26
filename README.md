@@ -41,7 +41,27 @@ and [Ubuntu](https://ubuntu.com/)
 or are based on one of those.
 There are many more Linux distributions that fill specific niches.
 
-Everything is a file on Unix, even devices. Each open file gets its own file descriptor path.
+### Unix File System Layout
+
+- `/bin` - core binaries
+- `/usr/bin` - more user binaries 
+- `/sbin` - system binaries
+- `/usr/sbin` - more system binaries
+- `/usr/local/bin` - 3rd party installed user binaries
+- `/usr/local/sbin` - 3rd party installed system binaries
+- `/etc` - configuration files
+- `/usr/local/etc` - 3rd party installed config files
+- `/tmp` - temporary files (often wiped after shutdown)
+- `/var/tmp` - more temporary runtime files
+- `/var/cache` - temporarily cached files for running software, package manager lists 
+- `/dev` - device files representing every piece of hardware, disk, device, usb etc.
+- `/home` - home directories for each user
+- `/User` - home directories for each user on Mac instead of `/home`
+- `/opt` - another location for installing optional / 3rd party software, often used by major installation programs such as Oracle DB
+
+Everything is a file on Unix, even devices (found under `/dev`). Each open file gets its own file descriptor eg. `/dev/fd/<number>`.
+
+### Unix Shells
 
 The Unix command line is extremely powerful and there are several shells to choose from.
 The default shell is Bash, which is based on the Bourne shell (Bash stands for Bourne again shell).
@@ -110,7 +130,6 @@ Common switches are `-h` / `--help`, `-v` / `--verbose`, `-V` / `--version`. The
 - `grep` - filters from standard input or a file and only prints to standard output lines that match the given regex filter argument
 - `hostname` - prints the hostname with domain (FQDN), use `-s` for short name without domain
 - `netstat` - prints the network connections, connected or listening ports. Commonly called as `netstat -an` or `netstat -lntpu`
-
 - `pbcopy` - copies Standard Input to the GUI clipboard on Mac
 - `pbpaste` - pastes the GUI clipboard to Standard Output on Mac
 - `xclip` -  copies Standard Input to the GUI (X) clipboard on Linux
