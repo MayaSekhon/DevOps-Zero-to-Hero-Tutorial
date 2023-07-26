@@ -95,6 +95,8 @@ export PATH="$PATH:/path/to/some/directory"
 
 Common switches are `-h` / `--help`, `-v` / `--verbose`, `-V` / `--version`. The long options with `--` are typically GNU convention
 
+For more detailed help, type `man <command>`. To search for manual pages run `man -k <command>`.
+
 - `pwd` - shows present working directory
 - `cd` - change directory, `cd -` to jump to last directory, `cd` without args to jump to `$HOME` directory
 - `ls -l` - list files and directories
@@ -108,6 +110,9 @@ Common switches are `-h` / `--help`, `-v` / `--verbose`, `-V` / `--version`. The
 - `less` - a better replacement of `more` that allows you to scroll upwards as well as downwards
 - `>` -  overwrite file
 - `>>` - append file
+- `clear` - clears the terminal screen, leaving your cursor at the top (`ctrl-l` is a shortcut)
+- `tmux` - terminal multiplexer - runs multiple shells in your terminal window and preserves your shell sessions if your terminal crashes or is accidentally closed
+- `nohup` - no hang up - lets a command keep running even if your shell is closed eg. broken ssh connection (this usually results in a HUP signal being sent to the process causing it to exit otherwise)
 - `sudo` - elevate permissions to another user, usually root (must be pre-approved in `/etc/sudoers`)
 - `su` - switch user, prompts for the user's password to start a new shell under their username
 - `which` - prints the full path to a given command
@@ -121,6 +126,13 @@ Common switches are `-h` / `--help`, `-v` / `--verbose`, `-V` / `--version`. The
 - `mkdir` -  creates a directory
 - `rmdir` - deletes an empty directory, fails with an error if not empty, in which case you need to use `rm -r` to also delete the directory and its contents (files / subdirectories)
 - `rm` - deletes files / directories. Common switches are `-r` to recursively delete into directories, and `-f`/`--force`
+- `tr` - replaces characters from standard input
+- `sed` - stream editor - replaces strings or deletes from standard input via regex searches
+- `awk` - text processing language, usually used for quick one-liners, also supports regex matches and prints numbered columns
+- `cut` - cuts out selected portions of each line by bite, character or field eg. 1st and 3rd fields `cut -d ' ' -f 1,3`
+- `column` - aligns input into vertically aligned columns, usually called as `column -t`
+- `df` - disk free - shows disk space for one or all disks eg. `df -h` for human units, `df -h /` for disk space of root disk
+- `env` - prints environment variables or sets environment variables and runs commands
 
 ## Networking Basics
 
