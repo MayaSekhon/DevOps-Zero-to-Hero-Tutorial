@@ -202,3 +202,27 @@ Use SSH for your git clone / pull / push because you should be using autogenerat
 / [1password](https://1password.com/), and have MFA enabled.
 
 If your organisation uses SSO enforced authentication for corporate controls via Azure Active Directory or similar IdP, then don't forget to authorize your SSH key for your enterprise GitHub organisation using the `Configure SSO` drop down to the right of the key.
+
+## CI/CD - Continuous Integration / Continuous Delivery
+
+Continuous Integration means to automatically run any actions upon changes in the repo related to building artifacts, installing dependencies (eg. software libraries or OS packages), testing, linting, code quality checks etc.
+
+Continuous Delivery is the next step where the software is delivered eg. deployed to a server (eg. copied and executed to run a new version of a website or software or config).
+
+CI/CD is done via specialised software that watches your Git repo and automatically runs upon any changes to the files in the repo.
+
+There are many different CI/CD software tools available to fulfill this function. Some prominent ones include:
+
+- Cloud Hosted:
+  - [GitHub Actions](https://github.com/features/actions)
+  - [GitLab CI/CD](https://docs.gitlab.com/ee/ci/)
+  - [Azure DevOps Pipelines](https://azure.microsoft.com/en-gb/products/devops/pipelines)
+  - [BitBucket Pipelines](https://bitbucket.org/product/features/pipelines)
+  - [AWS CodeBuild](https://aws.amazon.com/codebuild/)
+  - [GCP CloudBuild](https://cloud.google.com/build)
+- Self Hosted (Install and run on your own server or computer):
+  - [Jenkins](https://www.jenkins.io/)
+  - [Concourse](https://concourse-ci.org/)
+  - [TeamCity](https://www.jetbrains.com/teamcity/)
+
+and many others. For a more comprehensive list of badges of different CI, see https://harisekhon.netlify.app/.
