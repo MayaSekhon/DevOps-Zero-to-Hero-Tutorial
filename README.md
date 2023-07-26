@@ -163,6 +163,7 @@ of each other's changes as long as they're not on the same lines.
 - `git init` - creates a new Git repository (creates `.git/` directory storing your file changes and metadata)
 - `git clone` - clones a repo locally from an upstream server, such as GitHub
 - `git add` - marks files to be committed
+- `git mv` - moves or renames files (necessary for Git to track the move or rename, don't just use Unix `mv`)
 - `git diff` - shows you uncommitted changes made to files
 - `git commit` - saves selected changed files in a new version hashref
    (a unique alphanumeric string representing this set of changes)
