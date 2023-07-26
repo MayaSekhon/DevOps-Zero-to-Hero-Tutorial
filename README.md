@@ -1,6 +1,6 @@
 # Maya Sekhon - DevOps Zero-Hero Tutorial
 
-[![README lint](https://github.com/MayaSekhon/DevOps-Tutorial/actions/workflows/readme.yaml/badge.svg)](https://github.com/MayaSekhon/DevOps-Tutorial/actions/workflows/readme.yaml)
+[![README lint](https://github.com/MayaSekhon/DevOps-Tutorial/actions/workflows/readme-lint.yaml/badge.svg)](https://github.com/MayaSekhon/DevOps-Tutorial/actions/workflows/readme-lint.yaml)
 [![Repo on Azure DevOps](https://img.shields.io/badge/repo-Azure%20DevOps-0078D7?logo=azure%20devops)](https://dev.azure.com/mayavsekhon/Git/_git/DevOps-Tutorial)
 [![Repo on GitHub](https://img.shields.io/badge/repo-GitHub-2088FF?logo=github)](https://github.com/MayaSekhon/DevOps-Tutorial)
 [![Repo on GitLab](https://img.shields.io/badge/repo-GitLab-FCA121?logo=gitlab)](https://gitlab.com/MayaSekhon/DevOps-Tutorial)
