@@ -1,0 +1,10 @@
+name: YAML lint
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  yaml_lint:
+    name: YAML lint
+    uses: HariSekhon/GitHub-Actions/.github/workflows/yaml.yaml@master
