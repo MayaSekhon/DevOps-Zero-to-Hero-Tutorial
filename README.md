@@ -85,21 +85,6 @@ Most Unix commands often work as standard Unix filter programs where they can ac
 
 This combined with the rich ecosystem of bundled Unix commands is the true power of Unix shells.
 
-## Networking Basics
-
-- IP address - the unique address of the computer / device on a network. Most computers are still using IPv4 addresses in the format `1.2.3.4`, with the eventual intention of migrating to IPv6
-- Subnet mask / netmask - an address that when AND'd against the IP address, leaves just the network portion of the IP address
-- Network address - the IP address range, used by every device to determine if the remote IP is on the local network or a remote network
-- Switch - device with multiples ports connecting different computers on the local network
-- Router - device which connects 2 or more networks together
-- Gateway - a router that is sent traffic to forward on to other networks
-- Default Gateway - the router that you send all your remote traffic to when you don't have a more specific router to send it to e.g. your home broadband router for all traffic going to the internet
-- DNS - Domain Name System -  software that translates host names and domain names into IP addresses for network connections to initiate. Every computer has a DNS client that queries DNS servers on the internet that is used everytime you put a URL into your web browser
-- Hostname - the name of your computer on the local network
-- Domain Name - the address suffix used to group websites and email addresses eg. google.com
-- FQDN - Fully Qualified Domain Name - the complete host name and domain address eg. www.google.com
-- URL - Uniform Resource Locator - the full path to a website's webpage eg. https://linkedin.com/in/maya-sekhon
-
 ## Linux / Unix - Basic Commands
 
 To find a command, it must be in the `$PATH`. You will likely need to extend the path to include custom installation directories like so:
@@ -136,6 +121,21 @@ Common switches are `-h` / `--help`, `-v` / `--verbose`, `-V` / `--version`. The
 - `mkdir` -  creates a directory
 - `rmdir` - deletes an empty directory, fails with an error if not empty, in which case you need to use `rm -r` to also delete the directory and its contents (files / subdirectories)
 - `rm` - deletes files / directories. Common switches are `-r` to recursively delete into directories, and `-f`/`--force`
+
+## Networking Basics
+
+- IP address - the unique address of the computer / device on a network. Most computers are still using IPv4 addresses in the format `1.2.3.4`, with the eventual intention of migrating to IPv6
+- Subnet mask / netmask - an address that when AND'd against the IP address, leaves just the network portion of the IP address
+- Network address - the IP address range, used by every device to determine if the remote IP is on the local network or a remote network
+- Switch - device with multiples ports connecting different computers on the local network
+- Router - device which connects 2 or more networks together
+- Gateway - a router that is sent traffic to forward on to other networks
+- Default Gateway - the router that you send all your remote traffic to when you don't have a more specific router to send it to e.g. your home broadband router for all traffic going to the internet
+- DNS - Domain Name System -  software that translates host names and domain names into IP addresses for network connections to initiate. Every computer has a DNS client that queries DNS servers on the internet that is used everytime you put a URL into your web browser
+- Hostname - the name of your computer on the local network
+- Domain Name - the address suffix used to group websites and email addresses eg. google.com
+- FQDN - Fully Qualified Domain Name - the complete host name and domain address eg. www.google.com
+- URL - Uniform Resource Locator - the full path to a website's webpage eg. https://linkedin.com/in/maya-sekhon
 
 ## SSH
 
