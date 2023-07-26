@@ -3,6 +3,7 @@
 [![README lint](https://github.com/MayaSekhon/DevOps-Tutorial/actions/workflows/readme-lint.yaml/badge.svg)](https://github.com/MayaSekhon/DevOps-Tutorial/actions/workflows/readme-lint.yaml)
 [![URL lint](https://github.com/MayaSekhon/DevOps-Tutorial/actions/workflows/url-lint.yaml/badge.svg)](https://github.com/MayaSekhon/DevOps-Tutorial/actions/workflows/url-lint.yaml)
 [![YAML lint](https://github.com/MayaSekhon/DevOps-Tutorial/actions/workflows/yaml-lint.yaml/badge.svg)](https://github.com/MayaSekhon/DevOps-Tutorial/actions/workflows/yaml-lint.yaml)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/MayaSekhon/DevOps-Tutorial/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/MayaSekhon/DevOps-Tutorial/tree/main)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/MayaSekhon/DevOps-Tutorial?logo=github)](https://github.com/MayaSekhon/DevOps-Tutorial/commits/main)
 
 [![Repo on Azure DevOps](https://img.shields.io/badge/repo-Azure%20DevOps-0078D7?logo=azure%20devops)](https://dev.azure.com/mayavsekhon/Git/_git/DevOps-Tutorial)
