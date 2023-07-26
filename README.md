@@ -225,4 +225,4 @@ There are many different CI/CD software tools available to fulfill this function
   - [Concourse](https://concourse-ci.org/)
   - [TeamCity](https://www.jetbrains.com/teamcity/)
 
-and many others. For a more comprehensive list of badges of different CI, see https://harisekhon.netlify.app/.
+and many others. For a more comprehensive list of badges of different CI, see [HariSekhon/CI-CD](https://github.com/HariSekhon/CI-CD) or https://harisekhon.netlify.app/.
