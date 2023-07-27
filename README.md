@@ -64,10 +64,10 @@ The [Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hie
 | `/proc`           | process and kernel info exposed as virtual files                                                                           |
 | `/sys`            | system info exposed as virtual files                                                                                       |
 | `/dev`            | device files representing every piece of hardware, disk, device, usb etc.                                                  |
-| `/mnt`            | mounted extra filesystems                                                                                                  |  
+| `/mnt`            | mounted extra filesystems                                                                                                  |
 | `/home`           | home directories for each user                                                                                             |
 | `/User`           | home directories for each user on Mac instead of `/home`                                                                   |
-| `/root`           | home directory for the root user                                                                                           | 
+| `/root`           | home directory for the root user                                                                                           |
 | `/boot`           | contains the Linux kernel and `initrd` used to boot the OS                                                                 |
 | `/lib`            | libraries for binaries in `bin` and `/sbin`                                                                                |
 | `/usr/lib`        | libraries for the binaries in `/usr/bin` and `/usr/sbin`                                                                   |
@@ -151,19 +151,19 @@ For more detailed help, type `man <command>`. To search for manual pages run `ma
 - `awk` - text processing language, usually used for quick one-liners, also supports regex matches and prints numbered columns
 - `cut` - cuts out selected portions of each line by bite, character or field eg. 1st and 3rd fields `cut -d ' ' -f 1,3`
 - `column` - aligns input into vertically aligned columns, usually called as `column -t`
-- `df` - disk free - shows disk space for one or all disks eg. `df -h` for human units, `df -h /` for disk space of root disk or `df -h .` for disk space in the current partition where you are (`$PWD`) 
+- `df` - disk free - shows disk space for one or all disks eg. `df -h` for human units, `df -h /` for disk space of root disk or `df -h .` for disk space in the current partition where you are (`$PWD`)
 - `env` - prints environment variables or sets environment variables and runs commands
 - `top` - shows live process information, usually sorted by CPU or RAM - most useful details are PID, CPU, RAM, USER and COMMAND
 - `du` - disk used - counts the disk space used for given files or directories, eg. `du -h -s $HOME` to see how much space your home directory has taken in human-readable units eg. GB
 - `lsof` - list open files - open files and directories, the processes which currently have them opened, along with the user and PID
 - `vmstat` - virtual memory stats - shows RAM, CPU, disk I/O etc.
 - `dstat` - similar to `vmstat`
-- `lscpu` - shows number of CPUs, cores etc. 
+- `lscpu` - shows number of CPUs, cores etc.
 - `nproc` - the number of CPU cores available to the current process (could be less than the hardware if a limit has been applied to your user or process)
 - `set` - sets shell options such as `set -e` (usually used in scripts), or without args prints everything defined in the shell such as environment variables, aliases and functions
 - `vi` - text editor, the classic Unix terminal text editor, doesn't require a GUI, almost universally available on every server. If you need to edit a config file on a server, you will need to use this or another terminal editor program
 - `strace` - traces system calls and signals, eg. file open / read / close, network socket open / send / close
-- `dtruss` - similar to `strace` but for Mac 
+- `dtruss` - similar to `strace` but for Mac
 - `dmesg` - prints system kernel logs
 - `journalctl` - opens systemd logs
 - `diff` - compares files line by line, prints the differing lines
@@ -201,9 +201,10 @@ For more detailed help, type `man <command>`. To search for manual pages run `ma
 - `host` - performs DNS lookup for a given hostname or FQDN
 - `dig` - same as above, returns more info
 - `curl` - get a web page URL via HTTP(S) or send data eg. JSON to a web service in an HTTP(S) request
-- `wget` - similar to curl, downloads web pages to local files by default, use `wget -O - ...` to output to stdout to 
-emulate curl's behaviour on minimalist systems that don't have curl installed but have wget bundled inside the busybox shell, 
-such as Alpine Linux 
+- `wget` - similar to curl, downloads web pages to local files by default, use `wget -O - ...` to output to stdout to
+
+emulate curl's behaviour on minimalist systems that don't have curl installed but have wget bundled inside the busybox shell,
+such as Alpine Linux
 
 ## Networking Basics
 
@@ -400,7 +401,7 @@ Free open-source server software, written in Java. You must install, run, admini
 Uses a lot of plugins to extend its core functionality.
 
 Ultra powerful but more difficult to manage because you have to
-administer the server yourself, including updating all your plugins, compared to Cloud hosted solutions like the above, 
+administer the server yourself, including updating all your plugins, compared to Cloud hosted solutions like the above,
 which require no administration.
 
 Builds use a `Jenkinsfile` written in a DSL language, similar to code with braces and functions. See this master template [Jenkinsfile](https://github.com/HariSekhon/Jenkins/blob/master/Jenkinsfile) example.
@@ -408,8 +409,8 @@ Builds use a `Jenkinsfile` written in a DSL language, similar to code with brace
 Very powerful and flexible because you can write your own functions in the excellent [Groovy](https://groovy-lang.org/)
 programming language. Many such functions can be found in the [HariSekhon/Jenkins](https://github.com/HariSekhon/Jenkins) repo.
 
-Jenkins can have many agents installed on other servers to run pipelines. Jenkins integrates with the fantastic Kubernetes 
-platform to dynamically spawn agents in autoscaling Kubernetes clusters as needed. To quickly install Jenkins on Kubernetes 
+Jenkins can have many agents installed on other servers to run pipelines. Jenkins integrates with the fantastic Kubernetes
+platform to dynamically spawn agents in autoscaling Kubernetes clusters as needed. To quickly install Jenkins on Kubernetes
 with auto-spawning agents, see the [HariSekhon/Kubernetes-configs](https://github.com/HariSekhon/Kubernetes-configs) repo.
 
 A single Jenkins server will eventually hit performance and scalability limits in the server itself if coordinating and
