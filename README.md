@@ -382,6 +382,7 @@ There are many different CI/CD software tools available to fulfill this function
   - [GitLab CI/CD](https://docs.gitlab.com/ee/ci/)
   - [Azure DevOps Pipelines](https://azure.microsoft.com/en-gb/products/devops/pipelines)
   - [BitBucket Pipelines](https://bitbucket.org/product/features/pipelines)
+  - [Travis CI](https://www.travis-ci.com/)
   - [AWS CodeBuild](https://aws.amazon.com/codebuild/)
   - [GCP CloudBuild](https://cloud.google.com/build)
 - Self Hosted (Install and run on your own server or computer):
@@ -418,6 +419,10 @@ A well established, polished CI/CD solution with a nice GUI.
 
 For example, see the local [.circlci/config.yml](https://github.com/MayaSekhon/DevOps-Tutorial/blob/main/.circleci/config.yml)
 or the DevOps-Bash-tools [.circleci/config.yml](https://github.com/HariSekhon/DevOps-Bash-tools/blob/master/.circleci/config.yml)
+
+### Travis CI
+
+The original popular Cloud hosted CI/CD, no longer free for all public projects, considered legacy now.
 
 ### Jenkins
 
