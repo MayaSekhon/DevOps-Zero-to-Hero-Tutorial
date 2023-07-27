@@ -224,6 +224,23 @@ such as Alpine Linux
 - FQDN - Fully Qualified Domain Name - the complete host name and domain address eg. www.google.com
 - URL - Uniform Resource Locator - the full path to a website's webpage eg. https://linkedin.com/in/maya-sekhon
 
+Find your public IP address via any of these commands:
+
+```shell
+curl ifconfig.co
+```
+
+```shell
+curl ipinfo.io/ip
+```
+
+```shell
+curl api.ipify.org
+```
+
+```shell
+curl 'https://api.ipify.org?format=json'
+```
 ## SSH
 
 SSH stands for Secure Shell. It is the standard for connecting into remote shells on other computers across the network.
