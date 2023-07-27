@@ -322,7 +322,9 @@ Use SSH for your git clone / pull / push because you should be using autogenerat
 / [Lastpass](https://www.lastpass.com/)
 / [1password](https://1password.com/), and have MFA enabled.
 
-If your organisation uses SSO enforced authentication for corporate controls via Azure Active Directory or similar IdP, then don't forget to authorize your SSH key for your enterprise GitHub organisation using the `Configure SSO` drop down to the right of the key.
+If your organisation uses SSO enforced authentication for corporate controls via Azure Active Directory or similar IdP, 
+then don't forget to authorize your SSH key for your enterprise GitHub organisation using the `Configure SSO` drop down
+to the right of the key.
 
 ### GitHub alternatives - GitLab, BitBucket, Azure DevOps
 
@@ -335,10 +337,14 @@ These are all just Git repo hosting websites with CI/CD built in.
 GitHub's advantages over these alternatives include:
 
 - most popular and widely used
-- feature rich
+- feature rich repository management (rivalled only by GitLab)
 - huge ecosystem support and integrations
 - GitHub can be used for automatic SSO logins to many other 3rd party developer websites
 - better CI/CD, see [GitHub Actions section](#github-actions) further down
+- Pull Requests with extensive customization:
+  - merge control behaviours enforcing peer review approvals
+  - CI build / lint checks passed enforcement
+  - CI can update / modify / comment on Pull Requests
 
 ## CI/CD - Continuous Integration / Continuous Delivery
 
