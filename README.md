@@ -395,10 +395,11 @@ and many others. For a more comprehensive list of badges of different CI, see [H
 
 CI/CD built into each GitHub repo, requires just dropping in a yaml file into `.github/workflows`.
 
-- CI/CD unlimited free build minutes for public projects
-- CI/CD [Marketplace](https://github.com/marketplace?type=actions) of pre-built actions
-- CI/CD widespread support among 3rd party vendors providing ready made actions for their products such as various [SAST](https://en.wikipedia.org/wiki/Static_application_security_testing) tools
-- CI/CD better designed, multi-file workflows etc.
+- unlimited free build minutes for public projects
+- [Marketplace](https://github.com/marketplace?type=actions) of pre-built actions
+- widespread support among 3rd party vendors providing ready made actions for their products such as various [SAST](https://en.wikipedia.org/wiki/Static_application_security_testing) tools
+- better designed CI/CD than other cloud hosted vendors eg. multi-file workflows, separate repo badges etc.
+- community pre-built reuseable workflows are ready ro run, such as [HariSekhon/GitHub-Actions](https://github.com/HariSekhon/GitHub-Actions)
 
 For examples, see [.github/workflows](https://github.com/MayaSekhon/DevOps-Tutorial/tree/main/.github/workflows).
 
