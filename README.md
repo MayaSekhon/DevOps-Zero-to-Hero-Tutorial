@@ -391,6 +391,36 @@ A well established, polished CI/CD solution with a nice GUI.
 For example, see the local [.circlci/config.yml](https://github.com/MayaSekhon/DevOps-Tutorial/blob/main/.circleci/config.yml)
 or the DevOps-Bash-tools [.circleci/config.yml](https://github.com/HariSekhon/DevOps-Bash-tools/blob/master/.circleci/config.yml)
 
+### Jenkins
+
+The classic, most powerful and flexible CI/CD.
+
+Free open-source server software, written in Java. You must install, run, administer and update it yourself.
+
+Uses a lot of plugins to extend its core functionality.
+
+Ultra powerful but more difficult to manage because you have to
+administer the server yourself, including updating all your plugins, compared to Cloud hosted solutions like the above, 
+which require no administration.
+
+Builds use a `Jenkinsfile` written in a DSL language, similar to code with braces and functions. See this master template [Jenkinsfile](https://github.com/HariSekhon/Jenkins/blob/master/Jenkinsfile) example.
+
+Very powerful and flexible because you can write your own functions in the excellent [Groovy](https://groovy-lang.org/)
+programming language. Many such functions can be found in the [HariSekhon/Jenkins](https://github.com/HariSekhon/Jenkins) repo.
+
+Jenkins can have many agents installed on other servers to run pipelines. Jenkins integrates with the fantastic Kubernetes 
+platform to dynamically spawn agents in autoscaling Kubernetes clusters as needed. To quickly install Jenkins on Kubernetes 
+with auto-spawning agents, see the [HariSekhon/Kubernetes-configs](https://github.com/HariSekhon/Kubernetes-configs) repo.
+
+A single Jenkins server will eventually hit performance and scalability limits in the server itself if coordinating and
+scheduling hundreds of pipelines across agents.
+
+[CloudBees](https://www.cloudbees.com/)
+provides commercial software to run and manage multiple Jenkins servers centrally. This is because large enterprises
+typically end up with many Jenkins installations for different teams and projects but want centralised control and governance.
+
+For real-world Jenkins architecture and screenshots see the [HariSekhon/Jenkins](https://github.com/HariSekhon/Jenkins) repo.
+
 ## Data Formats
 
 - [YAML](https://en.wikipedia.org/wiki/YAML) - Yet Another Markup Language - simple way of representing key value pairs, lists, dictionaries. Usually used for config files eg. [readme-lint.yaml](https://github.com/MayaSekhon/DevOps-Tutorial/blob/main/.github/workflows/readme-lint.yaml)
