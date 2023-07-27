@@ -49,29 +49,43 @@ There are many more Linux distributions that fill specific niches.
 
 ### Unix File System Layout
 
-- `/bin` - core binaries
-- `/usr/bin` - more user binaries
-- `/sbin` - system binaries
-- `/usr/sbin` - more system binaries
-- `/usr/local/bin` - 3rd party installed user binaries
-- `/usr/local/sbin` - 3rd party installed system binaries
-- `/etc` - configuration files
-- `/usr/local/etc` - 3rd party installed config files
-- `/tmp` - temporary files (often wiped after shutdown)
-- `/var/tmp` - more temporary runtime files
-- `/var/cache` - temporarily cached files for running software, package manager lists
-- `/dev` - device files representing every piece of hardware, disk, device, usb etc.
-- `/home` - home directories for each user
-- `/User` - home directories for each user on Mac instead of `/home`
-- `/opt` - another location for installing optional / 3rd party software, often used by major installation programs such as Oracle DB
+The [Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard) defines the common layout you'll find across all unix style systems, including Linux.
 
-Everything is a file on Unix, even devices (found under `/dev`). Each open file gets its own file descriptor eg. `/dev/fd/<number>`.
+| Directory         | Description                                                                                                                |
+|-------------------|----------------------------------------------------------------------------------------------------------------------------|
+| `/bin`            | core binaries                                                                                                              |
+| `/usr/bin`        | more user binaries                                                                                                         |
+| `/sbin`           | system binaries                                                                                                            |
+| `/usr/sbin`       | more system binaries                                                                                                       |
+| `/usr/local/bin`  | 3rd party installed user binaries                                                                                          |
+| `/usr/local/sbin` | 3rd party installed system binaries                                                                                        |
+| `/etc`            | configuration files                                                                                                        |
+| `/usr/local/etc`  | 3rd party installed config files                                                                                           |
+| `/proc`           | process and kernel info exposed as virtual files                                                                           |
+| `/sys`            | system info exposed as virtual files                                                                                       |
+| `/dev`            | device files representing every piece of hardware, disk, device, usb etc.                                                  |
+| `/mnt`            | mounted extra filesystems                                                                                                  |  
+| `/home`           | home directories for each user                                                                                             |
+| `/User`           | home directories for each user on Mac instead of `/home`                                                                   |
+| `/root`           | home directory for the root user                                                                                           | 
+| `/boot`           | contains the Linux kernel and `initrd` used to boot the OS                                                                 |
+| `/lib`            | libraries for binaries in `bin` and `/sbin`                                                                                |
+| `/usr/lib`        | libraries for the binaries in `/usr/bin` and `/usr/sbin`                                                                   |
+| `/usr/local/lib`  | libraries for the binaries in `/usr/local/bin` and `/usr/local/sbin`                                                       |
+| `/opt`            | another location for installing optional / 3rd party software, often used by major installation programs such as Oracle DB |
+| `/tmp`            | temporary files (often wiped after shutdown)                                                                               |
+| `/var/tmp`        | more temporary runtime files                                                                                               |
+| `/var/cache`      | temporarily cached files for running software, package manager lists                                                       |
+
+Everything is a file on Unix, even devices (found under `/dev`).
+
+Each open file gets its own file descriptor eg. `/dev/fd/<number>`.
 
 ### Unix Shells
 
 The Unix command line is extremely powerful and there are several shells to choose from.
-The default shell is Bash, which is based on the Bourne shell (Bash stands for Bourne again shell).
-Other popular shells include ZSH and Fish.
+The default shell on Linux is Bash, which is based on the Bourne shell (Bash stands for Bourne again shell).
+Other popular shells include ZSH and Fish. Mac has in recent years switched the default shell to `zsh` to avoid GNU GPL open source licensing.
 
 The `root` account is the superuser admin account which always has UID 0.
 There should be no other account with UID 0 otherwise it would also be a root superuser account.
@@ -122,10 +136,10 @@ For more detailed help, type `man <command>`. To search for manual pages run `ma
 - `sudo` - elevate permissions to another user, usually root (must be pre-approved in `/etc/sudoers`)
 - `su` - switch user, prompts for the user's password to start a new shell under their username
 - `which` - prints the full path to a given command
+- `type` - similar to `which` but finds shell built-in commands
 - `ps` -  shows running processes. Commonly called as `ps -ef` or `ps aux` to show all processes on a unix based system
 - `grep` - filters from standard input or a file and only prints to standard output lines that match the given regex filter argument
 - `hostname` - prints the hostname with domain (FQDN), use `-s` for short name without domain
-- `netstat` - prints the network connections, connected or listening ports. Commonly called as `netstat -an` or `netstat -lntpu`
 - `pbcopy` - copies Standard Input to the GUI clipboard on Mac
 - `pbpaste` - pastes the GUI clipboard to Standard Output on Mac
 - `xclip` -  copies Standard Input to the GUI (X) clipboard on Linux
@@ -137,8 +151,59 @@ For more detailed help, type `man <command>`. To search for manual pages run `ma
 - `awk` - text processing language, usually used for quick one-liners, also supports regex matches and prints numbered columns
 - `cut` - cuts out selected portions of each line by bite, character or field eg. 1st and 3rd fields `cut -d ' ' -f 1,3`
 - `column` - aligns input into vertically aligned columns, usually called as `column -t`
-- `df` - disk free - shows disk space for one or all disks eg. `df -h` for human units, `df -h /` for disk space of root disk
+- `df` - disk free - shows disk space for one or all disks eg. `df -h` for human units, `df -h /` for disk space of root disk or `df -h .` for disk space in the current partition where you are (`$PWD`) 
 - `env` - prints environment variables or sets environment variables and runs commands
+- `top` - shows live process information, usually sorted by CPU or RAM - most useful details are PID, CPU, RAM, USER and COMMAND
+- `du` - disk used - counts the disk space used for given files or directories, eg. `du -h -s $HOME` to see how much space your home directory has taken in human-readable units eg. GB
+- `lsof` - list open files - open files and directories, the processes which currently have them opened, along with the user and PID
+- `vmstat` - virtual memory stats - shows RAM, CPU, disk I/O etc.
+- `dstat` - similar to `vmstat`
+- `lscpu` - shows number of CPUs, cores etc. 
+- `nproc` - the number of CPU cores available to the current process (could be less than the hardware if a limit has been applied to your user or process)
+- `set` - sets shell options such as `set -e` (usually used in scripts), or without args prints everything defined in the shell such as environment variables, aliases and functions
+- `vi` - text editor, the classic Unix terminal text editor, doesn't require a GUI, almost universally available on every server. If you need to edit a config file on a server, you will need to use this or another terminal editor program
+- `strace` - traces system calls and signals, eg. file open / read / close, network socket open / send / close
+- `dtruss` - similar to `strace` but for Mac 
+- `dmesg` - prints system kernel logs
+- `journalctl` - opens systemd logs
+- `diff` - compares files line by line, prints the differing lines
+- `date` - prints date and time, sets date and time, or prints the date / time in the format specified by a strftime string
+- `ifconfig` - prints or configures network interfaces, usually used to show your IP address
+- `ip` - similar to `ifconfig`, `ip addr` to show your IP address
+- `route` - prints or configures the network routing cables
+- `netstat` - prints the network connections, connected or listening ports. Commonly called as `netstat -an` or `netstat -lntpu`
+- `useradd` - creates a new user account
+- `userdel` - deletes a user account
+- `gpasswd` - administers the /etc/group and /etc/gshadow
+- `kill` - kills a process by PID or sends it a specific signal
+- `killall` - same as above, by name
+- `pkill` - same as above, by regex pattern matching name
+- `who` / `w` - display who is logged in
+- `rsync` - transfers / synchronizes files or directories efficiently between two directories by comparing timestamps (or optionally checksums) and only copies the files that are newer than the destination
+- `find` - finds files and directories, optionally perform commands on them, eg. `find . -name README.md`
+- `xargs` - reads standard input and uses it as arguments to the given command eg. `| xargs <command>`
+- `file` - shows the type of a given file eg. `ASCII text` or `POSIX tar archive`
+- `tar` - creates or extracts tarballs (bundle archives of files / directories), usually used for backups eg. `tar cvfz my.tar.gz somedirectory` and `tar xvfz my.tar.gz`
+- `gzip` - compresses files using the gzip compression algorithm
+- `gunzip` - decompresses `.gz` files
+- `bzip2` - compresses files using the bzip2 compression algorithm (more compression but slower)
+- `bunzip2` - decompresses `.bz2` files
+- `zless` - shows compressed or plain text files one screen at a time (pipes gzipped files through `gunzip` before opening in `less`)
+- `bzless` - same as `zless` but for `bzip2`
+- `zip` - creates zip compression archives
+- `unzip` - extracts zip compression archives
+- `md5sum` - generates md5 hash of a file's contents, or validates that a saved md5 checksum hash matches the hash computed for a given file's contents
+- `md5` - same as above, on Mac
+- `shasum` - computes the SHA-1 hash of a file's contents (a hex string that is unique to a given content input)
+- `sha1sum` - same as above, on Mac
+- `sha256sum` - same as above, with longer SHA-256 hash
+- `sha512sum` - same as above, with longer SHA-512 hash
+- `host` - performs DNS lookup for a given hostname or FQDN
+- `dig` - same as above, returns more info
+- `curl` - get a web page URL via HTTP(S) or send data eg. JSON to a web service in an HTTP(S) request
+- `wget` - similar to curl, downloads web pages to local files by default, use `wget -O - ...` to output to stdout to 
+emulate curl's behaviour on minimalist systems that don't have curl installed but have wget bundled inside the busybox shell, 
+such as Alpine Linux 
 
 ## Networking Basics
 
