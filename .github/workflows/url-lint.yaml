@@ -9,4 +9,4 @@ jobs:
     name: YAML lint
     uses: HariSekhon/GitHub-Actions/.github/workflows/url_links.yaml@master
     with:
-      url_links_ignored: https://api.ipify.org?format=json
+      url_links_ignored: https://api.ipify.org
