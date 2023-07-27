@@ -31,6 +31,8 @@
   - [GitHub Actions](#github-actions)
   - [Azure DevOps Pipelines](#azure-devops-pipelines)
   - [CircleCI](#circleci)
+  - [Travis CI](#travis-ci)
+  - [Jenkins](#jenkins)
 - [Data Formats](#data-formats)
 
 ## Linux / Unix Basics
