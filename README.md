@@ -241,6 +241,7 @@ curl api.ipify.org
 ```shell
 curl 'https://api.ipify.org?format=json'
 ```
+
 ## SSH
 
 SSH stands for Secure Shell. It is the standard for connecting into remote shells on other computers across the network.
@@ -342,7 +343,7 @@ Use SSH for your git clone / pull / push because you should be using autogenerat
 / [Lastpass](https://www.lastpass.com/)
 / [1password](https://1password.com/), and have MFA enabled.
 
-If your organisation uses SSO enforced authentication for corporate controls via Azure Active Directory or similar IdP, 
+If your organisation uses SSO enforced authentication for corporate controls via Azure Active Directory or similar IdP,
 then don't forget to authorize your SSH key for your enterprise GitHub organisation using the `Configure SSO` drop down
 to the right of the key.
 
