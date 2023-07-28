@@ -181,15 +181,15 @@ For more detailed help, type `man <command>`. To search for manual pages run `ma
 | `netstat`    | prints the network connections, connected or listening ports. Commonly called as `netstat -an` or `netstat -lntpu`                                                                                                                   |
 | `useradd`    | creates a new user account                                                                                                                                                                                                           |
 | `userdel`    | deletes a user account                                                                                                                                                                                                               |
-|  `gpasswd`   |  administers the /etc/group and /etc/gshadow                                                                                                                                                                                         |
-| `kill` | kills a process by PID or sends it a specific signal |
-| `killall` | same as above, by name |
-- `pkill` - same as above, by regex pattern matching name
-- `who` / `w` - display who is logged in
-- `rsync` - transfers / synchronizes files or directories efficiently between two directories by comparing timestamps (or optionally checksums) and only copies the files that are newer than the destination
-- `find` - finds files and directories, optionally perform commands on them, eg. `find . -name README.md`
-- `xargs` - reads standard input and uses it as arguments to the given command eg. `| xargs <command>`
-- `file` - shows the type of a given file eg. `ASCII text` or `POSIX tar archive`
+| `gpasswd`    | administers the /etc/group and /etc/gshadow                                                                                                                                                                                          |
+| `kill`       | kills a process by PID or sends it a specific signal                                                                                                                                                                                 |
+| `killall`    | same as above, by name                                                                                                                                                                                                               |
+| `pkill`      | same as above, by regex pattern matching name                                                                                                                                                                                        |
+| `who` / `w`  | display who is logged in                                                                                                                                                                                                             |
+| `rsync`      | transfers / synchronizes files or directories efficiently between two directories by comparing timestamps (or optionally checksums) and only copies the files that are newer than the destination                                    |
+| `find`       | finds files and directories, optionally perform commands on them, eg. `find . -name README.md`                                                                                                                                       |
+|  `xargs`     |  reads standard input and uses it as arguments to the given command eg. `                                                                                                                                                            | xargs <command>` |
+| `file` | shows the type of a given file eg. `ASCII text` or `POSIX tar archive` |
 - `tar` - creates or extracts tarballs (bundle archives of files / directories), usually used for backups eg. `tar cvfz my.tar.gz somedirectory` and `tar xvfz my.tar.gz`
 - `gzip` - compresses files using the gzip compression algorithm
 - `gunzip` - decompresses `.gz` files
