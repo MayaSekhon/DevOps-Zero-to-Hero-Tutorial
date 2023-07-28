@@ -7,7 +7,7 @@ readme:
 	git add README.md
 	git commit -m "Updated readme" README.md
 	git push
-	open https://github.com/MayaSekhon/DevOps-Tutorial
+	make browse
 
 .PHONY: makefile
 makefile:
@@ -16,3 +16,5 @@ makefile:
 	git push
 	open https://github.com/MayaSekhon/DevOps-Tutorial/blob/main/Makefile
 
+browse:
+	open https://github.com/MayaSekhon/DevOps-Tutorial
