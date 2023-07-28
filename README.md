@@ -122,50 +122,50 @@ Common switches are `-h` / `--help`, `-v` / `--verbose`, `-V` / `--version`. The
 
 For more detailed help, type `man <command>`. To search for manual pages run `man -k <command>`.
 
-| Directory  | Description                                                                                                                                                                                   |
-|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `pwd`      | shows present working directory                                                                                                                                                               | 
-| `cd`       | change directory, `cd -` to jump to last directory, `cd` without args to jump to `$HOME` directory                                                                                            |
-| `ls -l`    | list files and directories                                                                                                                                                                    |
-| `echo`     | prints a given string argument                                                                                                                                                                |
-| `cp`       | copies files or directories                                                                                                                                                                   |
-| `mv`       | moves files or directories                                                                                                                                                                    |
-| `cat`      | reads the contents of the file or standard input to standard output, your terminal if not redirected or piped to another command                                                              |
-| `head`     | reads the first N lines of a file or standard input                                                                                                                                           |
-| `tail`     | reads the last N lines of a file or standard input                                                                                                                                            |
-| `more`     | a paging program that displays one screenfull at a time and allows you to scroll down through longer outputs such as standard output from piped commands or files                             |
-| `less`     | a better replacement of `more` that allows you to scroll upwards as well as downwards                                                                                                         |
-| `>`        | overwrite file                                                                                                                                                                                |
-| `>>`       | append file                                                                                                                                                                                   |
-| `clear`    | clears the terminal screen, leaving your cursor at the top (`ctrl-l` is a shortcut)                                                                                                           |
-| `tmux`     | terminal multiplexer - runs multiple shells in your terminal window and preserves your shell sessions if your terminal crashes or is accidentally closed                                      |
-| `nohup`    | no hang up - lets a command keep running even if your shell is closed eg. broken ssh connection (this usually results in a HUP signal being sent to the process causing it to exit otherwise) |
-| `sudo`     | elevate permissions to another user, usually root (must be pre-approved in `/etc/sudoers`)                                                                                                    |
-| `su`       | switch user, prompts for the user's password to start a new shell under their username                                                                                                        |
-| `which`    | prints the full path to a given command                                                                                                                                                       |
-| `type`     | similar to `which` but finds shell built-in commands                                                                                                                                          |
-| `ps`       | shows running processes. Commonly called as `ps -ef` or `ps aux` to show all processes on a unix based system                                                                                 |
-| `grep`     | filters from standard input or a file and only prints to standard output lines that match the given regex filter argument                                                                     |
-| `hostname` | prints the hostname with domain (FQDN), use `-s` for short name without domain                                                                                                                |
-| `pbcopy`   | copies Standard Input to the GUI clipboard on Mac                                                                                                                                             |
-| `pbpaste`  | pastes the GUI clipboard to Standard Output on Mac                                                                                                                                            |
-| `xclip` |  copies Standard Input to the GUI (X) clipboard on Linux |
-| `mkdir` | creates a directory |
-| `rmdir` | deletes an empty directory, fails with an error if not empty, in which case you need to use `rm -r` to also delete the directory and its contents (files / subdirectories) |
-| `rm` | deletes files / directories. Common switches are `-r` to recursively delete into directories, and `-f`/`--force` |
-| `tr` | replaces characters from standard input |
-| `sed` | stream editor - replaces strings or deletes from standard input via regex searches |
-| `awk` | text processing language, usually used for quick one-liners, also supports regex matches and prints numbered columns |
-| `cut` | cuts out selected portions of each line by bite, character or field eg. 1st and 3rd fields `cut -d ' ' -f 1,3` |
-| `column` | aligns input into vertically aligned columns, usually called as `column -t` |
-| `df` | disk free - shows disk space for one or all disks eg. `df -h` for human units, `df -h /` for disk space of root disk or `df -h .` for disk space in the current partition where you are (`$PWD`) |
-- `env` - prints environment variables or sets environment variables and runs commands
-- `top` - shows live process information, usually sorted by CPU or RAM - most useful details are PID, CPU, RAM, USER and COMMAND
-- `du` - disk used - counts the disk space used for given files or directories, eg. `du -h -s $HOME` to see how much space your home directory has taken in human-readable units eg. GB
-- `lsof` - list open files - open files and directories, the processes which currently have them opened, along with the user and PID
-- `vmstat` - virtual memory stats - shows RAM, CPU, disk I/O etc.
-- `dstat` - similar to `vmstat`
-- `lscpu` - shows number of CPUs, cores etc.
+| Directory                | Description                                                                                                                                                                                      |
+|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `pwd`                    | shows present working directory                                                                                                                                                                  | 
+| `cd`                     | change directory, `cd -` to jump to last directory, `cd` without args to jump to `$HOME` directory                                                                                               |
+| `ls -l`                  | list files and directories                                                                                                                                                                       |
+| `echo`                   | prints a given string argument                                                                                                                                                                   |
+| `cp`                     | copies files or directories                                                                                                                                                                      |
+| `mv`                     | moves files or directories                                                                                                                                                                       |
+| `cat`                    | reads the contents of the file or standard input to standard output, your terminal if not redirected or piped to another command                                                                 |
+| `head`                   | reads the first N lines of a file or standard input                                                                                                                                              |
+| `tail`                   | reads the last N lines of a file or standard input                                                                                                                                               |
+| `more`                   | a paging program that displays one screenfull at a time and allows you to scroll down through longer outputs such as standard output from piped commands or files                                |
+| `less`                   | a better replacement of `more` that allows you to scroll upwards as well as downwards                                                                                                            |
+| `>`                      | overwrite file                                                                                                                                                                                   |
+| `>>`                     | append file                                                                                                                                                                                      |
+| `clear`                  | clears the terminal screen, leaving your cursor at the top (`ctrl-l` is a shortcut)                                                                                                              |
+| `tmux`                   | terminal multiplexer - runs multiple shells in your terminal window and preserves your shell sessions if your terminal crashes or is accidentally closed                                         |
+| `nohup`                  | no hang up - lets a command keep running even if your shell is closed eg. broken ssh connection (this usually results in a HUP signal being sent to the process causing it to exit otherwise)    |
+| `sudo`                   | elevate permissions to another user, usually root (must be pre-approved in `/etc/sudoers`)                                                                                                       |
+| `su`                     | switch user, prompts for the user's password to start a new shell under their username                                                                                                           |
+| `which`                  | prints the full path to a given command                                                                                                                                                          |
+| `type`                   | similar to `which` but finds shell built-in commands                                                                                                                                             |
+| `ps`                     | shows running processes. Commonly called as `ps -ef` or `ps aux` to show all processes on a unix based system                                                                                    |
+| `grep`                   | filters from standard input or a file and only prints to standard output lines that match the given regex filter argument                                                                        |
+| `hostname`               | prints the hostname with domain (FQDN), use `-s` for short name without domain                                                                                                                   |
+| `pbcopy`                 | copies Standard Input to the GUI clipboard on Mac                                                                                                                                                |
+| `pbpaste`                | pastes the GUI clipboard to Standard Output on Mac                                                                                                                                               |
+| `xclip`                  | copies Standard Input to the GUI (X) clipboard on Linux                                                                                                                                          |
+| `mkdir`                  | creates a directory                                                                                                                                                                              |
+| `rmdir`                  | deletes an empty directory, fails with an error if not empty, in which case you need to use `rm -r` to also delete the directory and its contents (files / subdirectories)                       |
+| `rm`                     | deletes files / directories. Common switches are `-r` to recursively delete into directories, and `-f`/`--force`                                                                                 |
+| `tr`                     | replaces characters from standard input                                                                                                                                                          |
+| `sed`                    | stream editor - replaces strings or deletes from standard input via regex searches                                                                                                               |
+| `awk`                    | text processing language, usually used for quick one-liners, also supports regex matches and prints numbered columns                                                                             |
+| `cut`                    | cuts out selected portions of each line by bite, character or field eg. 1st and 3rd fields `cut -d ' ' -f 1,3`                                                                                   |
+| `column`                 | aligns input into vertically aligned columns, usually called as `column -t`                                                                                                                      |
+| `df`                     | disk free - shows disk space for one or all disks eg. `df -h` for human units, `df -h /` for disk space of root disk or `df -h .` for disk space in the current partition where you are (`$PWD`) |
+| `env`                    | prints environment variables or sets environment variables and runs commands                                                                                                                     |
+| `top`                    | shows live process information, usually sorted by CPU or RAM - most useful details are PID, CPU, RAM, USER and COMMAND                                                                           |
+| `du`                     | disk used - counts the disk space used for given files or directories, eg. `du -h -s $HOME` to see how much space your home directory has taken in human-readable units eg. GB                   |
+|  `lsof` |  list open files open files and directories, the processes which currently have them opened, along with the user and PID                                                                                         |
+| `vmstat` | virtual memory stats - shows RAM, CPU, disk I/O etc. |
+| `dstat` | similar to `vmstat` |
+| `lscpu` | shows number of CPUs, cores etc. |
 - `nproc` - the number of CPU cores available to the current process (could be less than the hardware if a limit has been applied to your user or process)
 - `set` - sets shell options such as `set -e` (usually used in scripts), or without args prints everything defined in the shell such as environment variables, aliases and functions
 - `vi` - text editor, the classic Unix terminal text editor, doesn't require a GUI, almost universally available on every server. If you need to edit a config file on a server, you will need to use this or another terminal editor program
