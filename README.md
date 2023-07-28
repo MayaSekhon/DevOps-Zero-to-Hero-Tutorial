@@ -154,11 +154,11 @@ For more detailed help, type `man <command>`. To search for manual pages run `ma
 | `rmdir` | deletes an empty directory, fails with an error if not empty, in which case you need to use `rm -r` to also delete the directory and its contents (files / subdirectories) |
 | `rm` | deletes files / directories. Common switches are `-r` to recursively delete into directories, and `-f`/`--force` |
 | `tr` | replaces characters from standard input |
-- `sed` - stream editor - replaces strings or deletes from standard input via regex searches
-- `awk` - text processing language, usually used for quick one-liners, also supports regex matches and prints numbered columns
-- `cut` - cuts out selected portions of each line by bite, character or field eg. 1st and 3rd fields `cut -d ' ' -f 1,3`
-- `column` - aligns input into vertically aligned columns, usually called as `column -t`
-- `df` - disk free - shows disk space for one or all disks eg. `df -h` for human units, `df -h /` for disk space of root disk or `df -h .` for disk space in the current partition where you are (`$PWD`)
+| `sed` | stream editor - replaces strings or deletes from standard input via regex searches |
+| `awk` | text processing language, usually used for quick one-liners, also supports regex matches and prints numbered columns |
+| `cut` | cuts out selected portions of each line by bite, character or field eg. 1st and 3rd fields `cut -d ' ' -f 1,3` |
+| `column` | aligns input into vertically aligned columns, usually called as `column -t` |
+| `df` | disk free - shows disk space for one or all disks eg. `df -h` for human units, `df -h /` for disk space of root disk or `df -h .` for disk space in the current partition where you are (`$PWD`) |
 - `env` - prints environment variables or sets environment variables and runs commands
 - `top` - shows live process information, usually sorted by CPU or RAM - most useful details are PID, CPU, RAM, USER and COMMAND
 - `du` - disk used - counts the disk space used for given files or directories, eg. `du -h -s $HOME` to see how much space your home directory has taken in human-readable units eg. GB
