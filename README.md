@@ -149,11 +149,11 @@ For more detailed help, type `man <command>`. To search for manual pages run `ma
 | `hostname` | prints the hostname with domain (FQDN), use `-s` for short name without domain                                                                                                                |
 | `pbcopy`   | copies Standard Input to the GUI clipboard on Mac                                                                                                                                             |
 | `pbpaste`  | pastes the GUI clipboard to Standard Output on Mac                                                                                                                                            |
-- `xclip` -  copies Standard Input to the GUI (X) clipboard on Linux
-- `mkdir` -  creates a directory
-- `rmdir` - deletes an empty directory, fails with an error if not empty, in which case you need to use `rm -r` to also delete the directory and its contents (files / subdirectories)
-- `rm` - deletes files / directories. Common switches are `-r` to recursively delete into directories, and `-f`/`--force`
-- `tr` - replaces characters from standard input
+| `xclip` |  copies Standard Input to the GUI (X) clipboard on Linux |
+| `mkdir` | creates a directory |
+| `rmdir` | deletes an empty directory, fails with an error if not empty, in which case you need to use `rm -r` to also delete the directory and its contents (files / subdirectories) |
+| `rm` | deletes files / directories. Common switches are `-r` to recursively delete into directories, and `-f`/`--force` |
+| `tr` | replaces characters from standard input |
 - `sed` - stream editor - replaces strings or deletes from standard input via regex searches
 - `awk` - text processing language, usually used for quick one-liners, also supports regex matches and prints numbered columns
 - `cut` - cuts out selected portions of each line by bite, character or field eg. 1st and 3rd fields `cut -d ' ' -f 1,3`
