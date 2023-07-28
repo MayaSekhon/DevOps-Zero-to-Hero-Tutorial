@@ -122,22 +122,22 @@ Common switches are `-h` / `--help`, `-v` / `--verbose`, `-V` / `--version`. The
 
 For more detailed help, type `man <command>`. To search for manual pages run `man -k <command>`.
 
-| Directory                                                    | Description                                                                                                                      |
-|--------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| `pwd`                                                        | shows present working directory                                                                                                  | 
-| `cd`                                                         | change directory, `cd -` to jump to last directory, `cd` without args to jump to `$HOME` directory                               |
-| `ls -l`                                                      | list files and directories                                                                                                       |
-| `echo`                                                       | prints a given string argument                                                                                                   |
-| `cp`                                                         | copies files or directories                                                                                                      |
-| `mv`                                                         | moves files or directories                                                                                                       |
-| `cat`                                                        | reads the contents of the file or standard input to standard output, your terminal if not redirected or piped to another command |
-|  `head` | reads the first N lines of a file or standard input                                                                              |
-|`tail` | reads the last N lines of a file or standard input                                                                               |
-- `more` - a paging program that displays one screenfull at a time and allows you to scroll down through longer outputs such as standard output from piped commands or files
-- `less` - a better replacement of `more` that allows you to scroll upwards as well as downwards
-- `>` -  overwrite file
-- `>>` - append file
-- `clear` - clears the terminal screen, leaving your cursor at the top (`ctrl-l` is a shortcut)
+| Directory | Description                                                                                                                                                       |
+|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `pwd`     | shows present working directory                                                                                                                                   | 
+| `cd`      | change directory, `cd -` to jump to last directory, `cd` without args to jump to `$HOME` directory                                                                |
+| `ls -l`   | list files and directories                                                                                                                                        |
+| `echo`    | prints a given string argument                                                                                                                                    |
+| `cp`      | copies files or directories                                                                                                                                       |
+| `mv`      | moves files or directories                                                                                                                                        |
+| `cat`     | reads the contents of the file or standard input to standard output, your terminal if not redirected or piped to another command                                  |
+| `head`    | reads the first N lines of a file or standard input                                                                                                               |
+| `tail`    | reads the last N lines of a file or standard input                                                                                                                |
+| `more`    | a paging program that displays one screenfull at a time and allows you to scroll down through longer outputs such as standard output from piped commands or files |
+| `less`    | a better replacement of `more` that allows you to scroll upwards as well as downwards                                                                             |
+| `>`       | overwrite file                                                                                                                                                    |
+| `>>`      | append file                                                                                                                                                       |
+| `clear`   | clears the terminal screen, leaving your cursor at the top (`ctrl-l` is a shortcut)                                                                               |
 - `tmux` - terminal multiplexer - runs multiple shells in your terminal window and preserves your shell sessions if your terminal crashes or is accidentally closed
 - `nohup` - no hang up - lets a command keep running even if your shell is closed eg. broken ssh connection (this usually results in a HUP signal being sent to the process causing it to exit otherwise)
 - `sudo` - elevate permissions to another user, usually root (must be pre-approved in `/etc/sudoers`)
