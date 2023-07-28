@@ -499,7 +499,7 @@ Benefits of virtual machines include:
   - [Microsoft Hyper-V](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/) on Windows Server - enterprise features like live VM migration between servers
 - Desktop:
   - [Virtualbox](https://www.virtualbox.org/) - widely popular and easy to use, but only for x86-based processors eg. Intel or AMD
-  - [VMware Workstation](https://www.vmware.com/uk/products/workstation-pro.html) / [Fusion](https://www.vmware.com/uk/products/fusion.html) - 
+  - [VMware Workstation](https://www.vmware.com/uk/products/workstation-pro.html) / [Fusion](https://www.vmware.com/uk/products/fusion.html) -
     desktop virtualization software for Windows / Mac
   - [Microsoft Hyper-V](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/) on Windows - desktop app hypervisor
   - [Qemu](https://www.qemu.org/) - massively versatile but complex and difficult to use, but supports a wider range of processors such as new Apple Silicon
