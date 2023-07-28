@@ -188,14 +188,14 @@ For more detailed help, type `man <command>`. To search for manual pages run `ma
 | `who` / `w`  | display who is logged in                                                                                                                                                                                                             |
 | `rsync`      | transfers / synchronizes files or directories efficiently between two directories by comparing timestamps (or optionally checksums) and only copies the files that are newer than the destination                                    |
 | `find`       | finds files and directories, optionally perform commands on them, eg. `find . -name README.md`                                                                                                                                       |
-|  `xargs`     |  reads standard input and uses it as arguments to the given command eg. `                                                                                                                                                            | xargs <command>` |
-| `file` | shows the type of a given file eg. `ASCII text` or `POSIX tar archive` |
-- `tar` - creates or extracts tarballs (bundle archives of files / directories), usually used for backups eg. `tar cvfz my.tar.gz somedirectory` and `tar xvfz my.tar.gz`
-- `gzip` - compresses files using the gzip compression algorithm
-- `gunzip` - decompresses `.gz` files
-- `bzip2` - compresses files using the bzip2 compression algorithm (more compression but slower)
-- `bunzip2` - decompresses `.bz2` files
-- `zless` - shows compressed or plain text files one screen at a time (pipes gzipped files through `gunzip` before opening in `less`)
+| `xargs`      | reads standard input and uses it as arguments to the given command eg. `                                                                                                                                                             | xargs <command>` |
+| `file`       | shows the type of a given file eg. `ASCII text` or `POSIX tar archive`                                                                                                                                                               |
+| `tar`        | creates or extracts tarballs (bundle archives of files / directories), usually used for backups eg. `tar cvfz my.tar.gz somedirectory` and `tar xvfz my.tar.gz`                                                                      |
+|  `gzip`      |  compresses files using the gzip compression algorithm                                                                                                                                                                               |
+| `gunzip` | decompresses `.gz` files |
+| `bzip2` | compresses files using the bzip2 compression algorithm (more compression but slower) |
+| `bunzip2` | decompresses `.bz2` files |
+| `zless` | shows compressed or plain text files one screen at a time (pipes gzipped files through `gunzip` before opening in `less`) |
 - `bzless` - same as `zless` but for `bzip2`
 - `zip` - creates zip compression archives
 - `unzip` - extracts zip compression archives
