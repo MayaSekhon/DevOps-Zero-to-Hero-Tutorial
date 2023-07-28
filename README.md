@@ -492,6 +492,19 @@ Benefits of virtual machines include:
   running the VM dies for any reason.
   The VM disk files are kept on shared network storage, accessible to each server for this.
 
+### Popular Virtualization Software
+
+- Server:
+  - [VMware vSphere](https://www.vmware.com/uk/products/vsphere.html) - enterprise-grade mature software suite with centralised vCentre and ESXi server hypervisor, migration, failover etc.
+  - [Microsoft Hyper-V](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/) on Windows Server - enterprise features like live VM migration between servers
+- Desktop:
+  - [Virtualbox](https://www.virtualbox.org/) - widely popular and easy to use, but only for x86-based processors eg. Intel or AMD
+  - [VMware Workstation](https://www.vmware.com/uk/products/workstation-pro.html) / [Fusion](https://www.vmware.com/uk/products/fusion.html) - 
+    desktop virtualization software for Windows / Mac
+  - [Microsoft Hyper-V](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/) on Windows - desktop app hypervisor
+  - [Qemu](https://www.qemu.org/) - massively versatile but complex and difficult to use, but supports a wider range of processors such as new Apple Silicon
+  - [UTM](https://mac.getutm.app/) - easy to use Mac frontend to Qemu for new Apple Silicon processors
+
 ## Data Formats
 
 - [YAML](https://en.wikipedia.org/wiki/YAML) - Yet Another Markup Language - simple way of representing key value pairs, lists, dictionaries. Usually used for config files eg. [readme-lint.yaml](https://github.com/MayaSekhon/DevOps-Tutorial/blob/main/.github/workflows/readme-lint.yaml)
