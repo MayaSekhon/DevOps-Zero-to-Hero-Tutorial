@@ -122,11 +122,13 @@ Common switches are `-h` / `--help`, `-v` / `--verbose`, `-V` / `--version`. The
 
 For more detailed help, type `man <command>`. To search for manual pages run `man -k <command>`.
 
-- `pwd` - shows present working directory
-- `cd` - change directory, `cd -` to jump to last directory, `cd` without args to jump to `$HOME` directory
-- `ls -l` - list files and directories
-- `echo` - prints a given string argument
-- `cp` - copies files or directories
+| Directory | Description                     |
+------------|---------------------------------
+| `pwd`     | shows present working directory | 
+| `cd` | change directory, `cd -` to jump to last directory, `cd` without args to jump to `$HOME` directory |
+| `ls -l` | list files and directories |
+| `echo` | prints a given string argument |
+| `cp` | copies files or directories |
 - `mv` - moves files or directories
 - `cat` - reads the contents of the file or standard input to standard output, your terminal if not redirected or piped to another command
 - `head` - reads the first N lines of a file or standard input
