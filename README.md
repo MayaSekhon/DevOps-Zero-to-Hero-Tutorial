@@ -196,12 +196,12 @@ For more detailed help, type `man <command>`. To search for manual pages run `ma
 | `bzip2` | compresses files using the bzip2 compression algorithm (more compression but slower) |
 | `bunzip2` | decompresses `.bz2` files |
 | `zless` | shows compressed or plain text files one screen at a time (pipes gzipped files through `gunzip` before opening in `less`) |
-- `bzless` - same as `zless` but for `bzip2`
-- `zip` - creates zip compression archives
-- `unzip` - extracts zip compression archives
-- `md5sum` - generates md5 hash of a file's contents, or validates that a saved md5 checksum hash matches the hash computed for a given file's contents
-- `md5` - same as above, on Mac
-- `shasum` - computes the SHA-1 hash of a file's contents (a hex string that is unique to a given content input)
+| `bzless` | same as `zless` but for `bzip2`|
+| `zip` | creates zip compression archives |
+| `unzip` | extracts zip compression archives |
+| `md5sum` | generates md5 hash of a file's contents, or validates that a saved md5 checksum hash matches the hash computed for a given file's contents |
+| `md5` | same as above, on Mac |
+| `shasum` | computes the SHA-1 hash of a file's contents (a hex string that is unique to a given content input) |
 - `sha1sum` - same as above, on Mac
 - `sha256sum` - same as above, with longer SHA-256 hash
 - `sha512sum` - same as above, with longer SHA-512 hash
