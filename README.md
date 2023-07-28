@@ -459,6 +459,37 @@ typically end up with many Jenkins installations for different teams and project
 
 For real-world Jenkins architecture and screenshots see the [HariSekhon/Jenkins](https://github.com/HariSekhon/Jenkins) repo.
 
+## Virtualization
+
+Virtualization allows installing multiple virtual machines on one physical machine, using a special piece of software
+called a hypervisor that emulates computer hardware. Each virtual machine (VM) believes it's on its own computer and only sees the
+virtual hardware presented by the hypervisor, but not any of the adjacent VMs.
+Each VM can have different operating systems and versions installed.
+
+The hypervisor allocates a fixed amount of computer resources to each VM eg. CPU, RAM, disk space.
+
+Virtualization is used to utilise large server hardware capacity while maintaining isolation between different applications.
+The alternative of trying to install and run many applications on a single bare metal server operating system would be difficult to manage,
+with potential clashes of software dependencies, versions and libraries, and insecure because any misbehaving or
+hacked application could potentially impact all of the other adjacent applications.
+Virtualization solves this by allowing each application to run on its own isolated operating system with resource limits,
+to prevent resource starvation by greedy adjacent apps.
+
+Virtualization is also used on desktop computers to able to run software that would otherwise not be able to run on the base operating system
+eg. Windows vs Mac vs Linux applications are specific to each operating system.
+
+Benefits of virtual machines include:
+
+- fuller utilisation of hardware capacity
+- isolation between apps
+- snapshots - can save the computer state at different points in time and can revert to a previous snapshot easily.
+  This makes riskier changes and upgrades easy to roll back
+- migration - virtual machine disks are stored as files on the computer and can be exported, copied, imported to migrate between computers
+- appliances - virtual machine disks can be shared as ready-to-run installed computers with all software pre-installed and configured
+- failover - enterprise hypervisors can automatically migrate and restart VMs on other servers if the server
+  running the VM dies for any reason.
+  The VM disk files are kept on shared network storage, accessible to each server for this.
+
 ## Data Formats
 
 - [YAML](https://en.wikipedia.org/wiki/YAML) - Yet Another Markup Language - simple way of representing key value pairs, lists, dictionaries. Usually used for config files eg. [readme-lint.yaml](https://github.com/MayaSekhon/DevOps-Tutorial/blob/main/.github/workflows/readme-lint.yaml)
