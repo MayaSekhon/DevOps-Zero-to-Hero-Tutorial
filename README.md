@@ -188,30 +188,27 @@ For more detailed help, type `man <command>`. To search for manual pages run `ma
 | `who` / `w`  | display who is logged in                                                                                                                                                                                                             |
 | `rsync`      | transfers / synchronizes files or directories efficiently between two directories by comparing timestamps (or optionally checksums) and only copies the files that are newer than the destination                                    |
 | `find`       | finds files and directories, optionally perform commands on them, eg. `find . -name README.md`                                                                                                                                       |
-| `xargs`      | reads standard input and uses it as arguments to the given command eg. `                                                                                                                                                             | xargs <command>` |
+| `xargs`      | reads standard input and uses it as arguments to the given command eg. `| xargs <command>`                                                                                                                                           |                                                                                                                                            |
 | `file`       | shows the type of a given file eg. `ASCII text` or `POSIX tar archive`                                                                                                                                                               |
 | `tar`        | creates or extracts tarballs (bundle archives of files / directories), usually used for backups eg. `tar cvfz my.tar.gz somedirectory` and `tar xvfz my.tar.gz`                                                                      |
-|  `gzip`      |  compresses files using the gzip compression algorithm                                                                                                                                                                               |
-| `gunzip` | decompresses `.gz` files |
-| `bzip2` | compresses files using the bzip2 compression algorithm (more compression but slower) |
-| `bunzip2` | decompresses `.bz2` files |
-| `zless` | shows compressed or plain text files one screen at a time (pipes gzipped files through `gunzip` before opening in `less`) |
-| `bzless` | same as `zless` but for `bzip2`|
-| `zip` | creates zip compression archives |
-| `unzip` | extracts zip compression archives |
-| `md5sum` | generates md5 hash of a file's contents, or validates that a saved md5 checksum hash matches the hash computed for a given file's contents |
-| `md5` | same as above, on Mac |
-| `shasum` | computes the SHA-1 hash of a file's contents (a hex string that is unique to a given content input) |
-- `sha1sum` - same as above, on Mac
-- `sha256sum` - same as above, with longer SHA-256 hash
-- `sha512sum` - same as above, with longer SHA-512 hash
-- `host` - performs DNS lookup for a given hostname or FQDN
-- `dig` - same as above, returns more info
-- `curl` - get a web page URL via HTTP(S) or send data eg. JSON to a web service in an HTTP(S) request
-- `wget` - similar to curl, downloads web pages to local files by default, use `wget -O - ...` to output to stdout to
-
-emulate curl's behaviour on minimalist systems that don't have curl installed but have wget bundled inside the busybox shell,
-such as Alpine Linux
+| `gzip`       | compresses files using the gzip compression algorithm                                                                                                                                                                                |
+| `gunzip`     | decompresses `.gz` files                                                                                                                                                                                                             |
+| `bzip2`      | compresses files using the bzip2 compression algorithm (more compression but slower)                                                                                                                                                 |
+| `bunzip2`    | decompresses `.bz2` files                                                                                                                                                                                                            |
+| `zless`      | shows compressed or plain text files one screen at a time (pipes gzipped files through `gunzip` before opening in `less`)                                                                                                            |
+| `bzless`     | same as `zless` but for `bzip2`                                                                                                                                                                                                      |
+| `zip`        | creates zip compression archives                                                                                                                                                                                                     |
+| `unzip`      | extracts zip compression archives                                                                                                                                                                                                    |
+| `md5sum`     | generates md5 hash of a file's contents, or validates that a saved md5 checksum hash matches the hash computed for a given file's contents                                                                                           |
+| `md5`        | same as above, on Mac                                                                                                                                                                                                                |
+| `shasum`     | computes the SHA-1 hash of a file's contents (a hex string that is unique to a given content input)                                                                                                                                  |
+| `sha1sum`    | same as above, on Mac                                                                                                                                                                                                                |
+| `sha256sum`  | same as above, with longer SHA-256 hash                                                                                                                                                                                              |
+| `sha512sum`  | same as above, with longer SHA-512 hash                                                                                                                                                                                              |
+| `host`       | performs DNS lookup for a given hostname or FQDN                                                                                                                                                                                     |
+| `dig`        | same as above, returns more info                                                                                                                                                                                                     |
+| `curl`       | get a web page URL via HTTP(S) or send data eg. JSON to a web service in an HTTP(S) request                                                                                                                                          |
+| `wget`       | similar to curl, downloads web pages to local files by default, use `wget -O - ...` to output to stdout to emulate curl's behaviour on minimalist systems that don't have curl installed but have wget bundled inside the busybox shell, such as Alpine Linux |
 
 ## Networking Basics
 
