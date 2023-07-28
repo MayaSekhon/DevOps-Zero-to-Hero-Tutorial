@@ -177,13 +177,13 @@ For more detailed help, type `man <command>`. To search for manual pages run `ma
 | `date`       | prints date and time, sets date and time, or prints the date / time in the format specified by a strftime string                                                                                                                     |
 | `ifconfig`   | prints or configures network interfaces, usually used to show your IP address                                                                                                                                                        |
 | `ip`         | similar to `ifconfig`, `ip addr` to show your IP address                                                                                                                                                                             |
-|  `route`     |  prints or configures the network routing cables                                                                                                                                                                                     |
-- `netstat` - prints the network connections, connected or listening ports. Commonly called as `netstat -an` or `netstat -lntpu`
-- `useradd` - creates a new user account
-- `userdel` - deletes a user account
-- `gpasswd` - administers the /etc/group and /etc/gshadow
-- `kill` - kills a process by PID or sends it a specific signal
-- `killall` - same as above, by name
+| `route`      | prints or configures the network routing cables                                                                                                                                                                                      |
+| `netstat`    | prints the network connections, connected or listening ports. Commonly called as `netstat -an` or `netstat -lntpu`                                                                                                                   |
+| `useradd`    | creates a new user account                                                                                                                                                                                                           |
+| `userdel`    | deletes a user account                                                                                                                                                                                                               |
+|  `gpasswd`   |  administers the /etc/group and /etc/gshadow                                                                                                                                                                                         |
+| `kill` | kills a process by PID or sends it a specific signal |
+| `killall` | same as above, by name |
 - `pkill` - same as above, by regex pattern matching name
 - `who` / `w` - display who is logged in
 - `rsync` - transfers / synchronizes files or directories efficiently between two directories by comparing timestamps (or optionally checksums) and only copies the files that are newer than the destination
