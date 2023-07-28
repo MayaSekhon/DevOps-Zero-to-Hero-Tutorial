@@ -427,6 +427,8 @@ or the DevOps-Bash-tools [.circleci/config.yml](https://github.com/HariSekhon/De
 
 The original popular Cloud hosted CI/CD, no longer free for all public projects, considered legacy now.
 
+Configuration template in [HariSekhon/Templates](https://github.com/HariSekhon/Templates) repo [.travis.yml](https://github.com/HariSekhon/Templates/blob/master/.travis.yml)
+
 ### Jenkins
 
 The classic, most powerful and flexible CI/CD.
