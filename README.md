@@ -502,7 +502,7 @@ Benefits of virtual machines include:
   - [VMware Workstation](https://www.vmware.com/uk/products/workstation-pro.html) / [Fusion](https://www.vmware.com/uk/products/fusion.html) -
     desktop virtualization software for Windows / Mac
   - [Microsoft Hyper-V](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/) on Windows - desktop app hypervisor
-  - [Qemu](https://www.qemu.org/) - massively versatile but complex and difficult to use, but supports a wider range of processors such as new Apple Silicon
+  - [Qemu](https://www.qemu.org/) - massively versatile but complex and difficult to use, but supports a wider range of processors such as new Apple Silicon (ARM processor)
   - [UTM](https://mac.getutm.app/) - easy to use Mac frontend to Qemu for new Apple Silicon processors
 
 ## Data Formats
