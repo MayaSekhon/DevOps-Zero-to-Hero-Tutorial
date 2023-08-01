@@ -84,6 +84,8 @@ Everything is a file on Unix, even devices (found under `/dev`).
 
 Each open file gets its own file descriptor eg. `/dev/fd/<number>`.
 
+Binaries & Libraries:
+
 | Directory         | Description                                                                                                                |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------|
 | `/bin`            | core binaries                                                                                                              |
@@ -92,20 +94,35 @@ Each open file gets its own file descriptor eg. `/dev/fd/<number>`.
 | `/usr/sbin`       | more system binaries                                                                                                       |
 | `/usr/local/bin`  | 3rd party installed user binaries                                                                                          |
 | `/usr/local/sbin` | 3rd party installed system binaries                                                                                        |
-| `/etc`            | configuration files                                                                                                        |
-| `/usr/local/etc`  | 3rd party installed config files                                                                                           |
-| `/dev`            | device files representing every piece of hardware, disk, device, usb etc.                                                  |
-| `/proc`           | process and kernel info exposed as virtual files                                                                           |
-| `/sys`            | system info exposed as virtual files                                                                                       |
-| `/mnt`            | mounted extra filesystems                                                                                                  |
-| `/home`           | home directories for each user                                                                                             |
-| `/User`           | home directories for each user on Mac instead of `/home`                                                                   |
-| `/root`           | home directory for the root user                                                                                           |
-| `/boot`           | contains the Linux kernel and `initrd` used to boot the OS                                                                 |
 | `/lib`            | libraries for binaries in `/bin` and `/sbin`                                                                               |
 | `/usr/lib`        | libraries for the binaries in `/usr/bin` and `/usr/sbin`                                                                   |
 | `/usr/local/lib`  | libraries for the binaries in `/usr/local/bin` and `/usr/local/sbin`                                                       |
 | `/opt`            | another location for installing optional / 3rd party software, often used by major installation programs such as Oracle DB |
+
+Virtual File Systems:
+
+| Directory         | Description                                                                                                                |
+|-------------------|----------------------------------------------------------------------------------------------------------------------------|
+| `/dev`            | device files representing every piece of hardware, disk, device, usb etc.                                                  |
+| `/proc`           | process and kernel info exposed as virtual files                                                                           |
+| `/sys`            | system info exposed as virtual files                                                                                       |
+
+Home Directories:
+
+| Directory         | Description                                                                                                                |
+|-------------------|----------------------------------------------------------------------------------------------------------------------------|
+| `/root`           | home directory for the root user                                                                                           |
+| `/home`           | home directories for each user                                                                                             |
+| `/User`           | home directories for each user on Mac instead of `/home`                                                                   |
+
+System Configurations:
+
+| Directory         | Description                                                                                                                |
+|-------------------|----------------------------------------------------------------------------------------------------------------------------|
+| `/boot`           | contains the Linux kernel and `initrd` used to boot the OS                                                                 |
+| `/etc`            | configuration files                                                                                                        |
+| `/usr/local/etc`  | 3rd party installed config files                                                                                           |
+| `/mnt`            | mounted extra filesystems                                                                                                  |
 | `/tmp`            | temporary files (often wiped after shutdown)                                                                               |
 | `/var/tmp`        | more temporary runtime files                                                                                               |
 | `/var/cache`      | temporarily cached files for running software, package manager lists                                                       |
