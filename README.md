@@ -390,18 +390,20 @@ of each other's changes as long as they're not on the same lines.
 
 ### Git Commands
 
-- `git init` - creates a new Git repository (creates `.git/` directory storing your file changes and metadata)
-- `git clone` - clones a repo locally from an upstream server, such as GitHub
-- `git add` - marks files to be committed
-- `git mv` - moves or renames files (necessary for Git to track the move or rename, don't just use Unix `mv`)
-- `git diff` - shows you uncommitted changes made to files
-- `git commit` - saves selected changed files in a new version hashref
-   (a unique alphanumeric string representing this set of changes)
-- `git push` - pushes your local commits to an upstream shared repository such as GitHub
-- `git pull` - pulls the latest commits from the upstream shared repository
-- `git branch` - show branches / create a new branch
-- `git checkout` - checks out the files at a given ref (branch / tag / hashref)
-- `git remote -v` - prints the remote repos and their URLs
+| Command         | Description                                                                                                           |
+|-----------------|-----------------------------------------------------------------------------------------------------------------------|
+| `git init`      | creates a new Git repository (creates `.git/` directory storing your file changes and metadata)                       |
+| `git clone`     | clones a repo locally from an upstream server, such as GitHub                                                         |
+| `git add`       | marks files to be committed                                                                                           |
+| `git mv`        | moves or renames files (necessary for Git to track the move or rename, don't just use Unix `mv`)                      |
+| `git diff`      | shows you uncommitted changes made to files                                                                           |
+| `git commit`    | saves selected changed files in a new version hashref (a unique alphanumeric string representing this set of changes) |
+| `git push`      | pushes your local commits to an upstream shared repository such as GitHub                                             |
+| `git pull`      | pulls the latest commits from the upstream shared repository                                                          |
+| `git branch`    | show branches / create a new branch                                                                                   |
+| `git checkout`  | checks out the files at a given ref (branch / tag / hashref)                                                          |
+| `git merge`     | merges a given branch into the current branch                                                                         |
+| `git remote -v` | shows the remote repos and their URLs                                                                                |
 
 `.gitignore` - file listing paths to ignore, one per line, can be set globally in your home directory or in the root top level directory of the repository
 
