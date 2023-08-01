@@ -87,7 +87,7 @@ The [Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hie
 | `/User`           | home directories for each user on Mac instead of `/home`                                                                   |
 | `/root`           | home directory for the root user                                                                                           |
 | `/boot`           | contains the Linux kernel and `initrd` used to boot the OS                                                                 |
-| `/lib`            | libraries for binaries in `bin` and `/sbin`                                                                                |
+| `/lib`            | libraries for binaries in `/bin` and `/sbin`                                                                               |
 | `/usr/lib`        | libraries for the binaries in `/usr/bin` and `/usr/sbin`                                                                   |
 | `/usr/local/lib`  | libraries for the binaries in `/usr/local/bin` and `/usr/local/sbin`                                                       |
 | `/opt`            | another location for installing optional / 3rd party software, often used by major installation programs such as Oracle DB |
@@ -242,22 +242,22 @@ For more detailed help, type `man <command>`. To search for manual pages run `ma
 
 #### Compression
 
-| Directory    | Description                                                                                                                                                                                                                                                   |
-|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `gzip`       | compresses files using the gzip compression algorithm                                                                                                                                                                                                         |
-| `gunzip`     | decompresses `.gz` files                                                                                                                                                                                                                                      |
-| `bzip2`      | compresses files using the bzip2 compression algorithm (more compression but slower)                                                                                                                                                                          |
-| `bunzip2`    | decompresses `.bz2` files                                                                                                                                                                                                                                     |
-| `zless`      | shows compressed or plain text files one screen at a time (pipes gzipped files through `gunzip` before opening in `less`)                                                                                                                                     |
-| `bzless`     | same as `zless` but for `bzip2`                                                                                                                                                                                                                               |
-| `zip`        | creates zip compression archives                                                                                                                                                                                                                              |
-| `unzip`      | extracts zip compression archives                                                                                                                                                                                                                             |
-| `md5sum`     | generates md5 hash of a file's contents, or validates that a saved md5 checksum hash matches the hash computed for a given file's contents                                                                                                                    |
-| `md5`        | same as above, on Mac                                                                                                                                                                                                                                         |
-| `shasum`     | computes the SHA-1 hash of a file's contents (a hex string that is unique to a given content input)                                                                                                                                                           |
-| `sha1sum`    | same as above, on Mac                                                                                                                                                                                                                                         |
-| `sha256sum`  | same as above, with longer SHA-256 hash                                                                                                                                                                                                                       |
-| `sha512sum`  | same as above, with longer SHA-512 hash                                                                                                                                                                                                                       |
+| Directory    | Description                                                                                                                                |
+|--------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| `gzip`       | compresses files using the gzip compression algorithm, adds the `.gz` file extension                                                       |
+| `gunzip`     | decompresses `.gz` files                                                                                                                   |
+| `bzip2`      | compresses files using the bzip2 compression algorithm (more compression but slower)                                                       |
+| `bunzip2`    | decompresses `.bz2` files                                                                                                                  |
+| `zless`      | shows compressed or plain text files one screen at a time (pipes gzipped files through `gunzip` before opening in `less`)                  |
+| `bzless`     | same as `zless` but for `bzip2`                                                                                                            |
+| `zip`        | creates zip compression archives                                                                                                           |
+| `unzip`      | extracts zip compression archives                                                                                                          |
+| `md5sum`     | generates md5 hash of a file's contents, or validates that a saved md5 checksum hash matches the hash computed for a given file's contents |
+| `md5`        | same as above, on Mac                                                                                                                      |
+| `shasum`     | computes the SHA-1 hash of a file's contents (a hex string that is unique to a given content input)                                        |
+| `sha1sum`    | same as above, on Mac                                                                                                                      |
+| `sha256sum`  | same as above, with longer SHA-256 hash                                                                                                    |
+| `sha512sum`  | same as above, with longer SHA-512 hash                                                                                                    |
 
 ## Networking Basics
 
@@ -429,7 +429,7 @@ git push
 Make sure to enable Two-factor authentication (2FA) in your [security settings](https://github.com/settings/security). Get [Microsoft Authenticator app](https://www.microsoft.com/en-gb/security/mobile-authenticator-app).
 
 Copy and paste the contents of your `$HOME/.ssh/id_rsa.pub` into your profile [keys settings](https://github.com/settings/keys)
-(hint: `pbcopy $HOME/.ssh/id_rsa.pub` on Mac to copy it straight into your clipboard).
+(hint: `pbcopy < $HOME/.ssh/id_rsa.pub` on Mac to copy it straight into your clipboard).
 
 Use SSH for your git clone / pull / push because you should be using autogenerated complex passwords that are stored in password managers such as [Chrome](https://www.google.com/intl/en_uk/chrome/)
 / [Lastpass](https://www.lastpass.com/)
