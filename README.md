@@ -267,7 +267,7 @@ For more detailed help, type `man <command>`. To search for manual pages run `ma
 - Router - device which connects 2 or more networks together
 - Gateway - a router that is sent traffic to forward on to other networks
 - Default Gateway - the router that you send all your remote traffic to when you don't have a more specific router to send it to e.g. your home broadband router for all traffic going to the internet
-- DNS - Domain Name System -  software that translates host names and domain names into IP addresses for network connections to initiate. Every computer has a DNS client that queries DNS servers on the internet that is used everytime you put a URL into your web browser
+- DNS - Domain Name System -  software that translates host names and domain names into IP addresses for network connections to initiate. Every computer has a DNS client that queries DNS servers on the internet that is used everytime you put a URL into your web browser. Popular DNS server software includes Bind, Microsoft DNS, DNSmasq, djbdns
 - Hostname - the name of your computer on the local network
 - Domain Name - the address suffix used to group websites and email addresses eg. google.com
 - FQDN - Fully Qualified Domain Name - the complete host name and domain address eg. www.google.com
