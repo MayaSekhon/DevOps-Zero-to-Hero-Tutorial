@@ -493,7 +493,7 @@ CI/CD built into each GitHub repo, requires just dropping in a yaml file into `.
 - [Marketplace](https://github.com/marketplace?type=actions) of pre-built actions
 - widespread support among 3rd party vendors providing ready made actions for their products such as various [SAST](https://en.wikipedia.org/wiki/Static_application_security_testing) tools
 - better designed CI/CD than other cloud hosted vendors eg. multi-file workflows, separate repo badges etc.
-- community pre-built reuseable workflows are ready ro run, such as [HariSekhon/GitHub-Actions](https://github.com/HariSekhon/GitHub-Actions)
+- community pre-built reusable workflows are ready ro run, such as [HariSekhon/GitHub-Actions](https://github.com/HariSekhon/GitHub-Actions)
 
 For examples, see [.github/workflows](https://github.com/MayaSekhon/DevOps-Tutorial/tree/main/.github/workflows).
 
@@ -594,7 +594,9 @@ Benefits of virtual machines include:
   - [UTM](https://mac.getutm.app/) - easy to use Mac frontend to Qemu for new Apple Silicon processors
 
 ## Data Formats
-
-- [YAML](https://en.wikipedia.org/wiki/YAML) - Yet Another Markup Language - simple way of representing key value pairs, lists, dictionaries. Usually used for config files eg. [readme-lint.yaml](https://github.com/MayaSekhon/DevOps-Tutorial/blob/main/.github/workflows/readme-lint.yaml)
-- [JSON](https://en.wikipedia.org/wiki/JSON) - JavaScript Object Notation - text-based data file written like a dictionary in code with braces, key-value pairs, lists, often used for data interchange between web services eg. `{ "name": "Maya", "hobbies": ["coding", "music"] }`
-- [XML](https://en.wikipedia.org/wiki/XML) - Extensible Markup Language - text-based data file with a start \<tag\> and end \</tag\> (with a slash) surrounding each field eg. `<name>Maya</name>`, older format used for data interchange in older web services
+ 
+| Format | Description |
+| -------|-------------|
+|[YAML](https://en.wikipedia.org/wiki/YAML) | Yet Another Markup Language - simple way of representing key value pairs, lists, dictionaries. Usually used for config files eg. [readme-lint.yaml](https://github.com/MayaSekhon/DevOps-Tutorial/blob/main/.github/workflows/readme-lint.yaml) |
+|[JSON](https://en.wikipedia.org/wiki/JSON) | JavaScript Object Notation - text-based data file written like a dictionary in code with braces, key-value pairs, lists, often used for data interchange between web services eg. `{ "name": "Maya", "hobbies": ["coding", "music"] }` |
+|[XML](https://en.wikipedia.org/wiki/XML) | Extensible Markup Language - text-based data file with a start \<tag\> and end \</tag\> (with a slash) surrounding each field eg. `<name>Maya</name>`, older format used for data interchange in older web services |
