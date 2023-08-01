@@ -80,6 +80,10 @@ There are many more Linux distributions that fill specific niches.
 
 The [Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard) defines the common layout you'll find across all unix style systems, including Linux.
 
+Everything is a file on Unix, even devices (found under `/dev`).
+
+Each open file gets its own file descriptor eg. `/dev/fd/<number>`.
+
 | Directory         | Description                                                                                                                |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------|
 | `/bin`            | core binaries                                                                                                              |
@@ -106,10 +110,6 @@ The [Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hie
 | `/var/tmp`        | more temporary runtime files                                                                                               |
 | `/var/cache`      | temporarily cached files for running software, package manager lists                                                       |
 | `/var/log`        | system log files                                                                                                           |
-
-Everything is a file on Unix, even devices (found under `/dev`).
-
-Each open file gets its own file descriptor eg. `/dev/fd/<number>`.
 
 ### Unix Shells
 
