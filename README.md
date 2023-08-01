@@ -79,9 +79,9 @@ The [Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hie
 | `/usr/local/sbin` | 3rd party installed system binaries                                                                                        |
 | `/etc`            | configuration files                                                                                                        |
 | `/usr/local/etc`  | 3rd party installed config files                                                                                           |
+| `/dev`            | device files representing every piece of hardware, disk, device, usb etc.                                                  |
 | `/proc`           | process and kernel info exposed as virtual files                                                                           |
 | `/sys`            | system info exposed as virtual files                                                                                       |
-| `/dev`            | device files representing every piece of hardware, disk, device, usb etc.                                                  |
 | `/mnt`            | mounted extra filesystems                                                                                                  |
 | `/home`           | home directories for each user                                                                                             |
 | `/User`           | home directories for each user on Mac instead of `/home`                                                                   |
@@ -94,6 +94,7 @@ The [Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hie
 | `/tmp`            | temporary files (often wiped after shutdown)                                                                               |
 | `/var/tmp`        | more temporary runtime files                                                                                               |
 | `/var/cache`      | temporarily cached files for running software, package manager lists                                                       |
+| `/var/log` | system log files                                                                                                           |
 
 Everything is a file on Unix, even devices (found under `/dev`).
 
@@ -410,15 +411,14 @@ of each other's changes as long as they're not on the same lines.
 #### Example
 
 ```shell
-git init
-git add README.md
-git commit -m "added readme"
+git clone git@github.com:MayaSekhon/DevOps-Zero-to-Hero-Tutorial
 
 # edit file
 vim README.md
 
 git diff
 git commit -m "updated readme"
+
 git push
 ```
 
