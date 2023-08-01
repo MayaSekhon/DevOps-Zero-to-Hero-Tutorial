@@ -49,7 +49,7 @@ Proprietary paid for software tools are used when no free alternatives are good 
 is heavily underpinned by open-source technologies such that many of the open-source tools work the same and
 the compute-on-demand pay-as-you-go model means lower capex at the expense of higher opex and convenience.
 
-<img src="https://octopus.com/devops/i/x/octopus-devops-infinity.png" width=600 height=300>
+<img src="https://octopus.com/devops/i/x/octopus-devops-infinity.png" alt="DevOps Infinity Diagram" width=600 height=300>
 
 ## Linux / Unix Basics
 
@@ -94,7 +94,7 @@ The [Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hie
 | `/tmp`            | temporary files (often wiped after shutdown)                                                                               |
 | `/var/tmp`        | more temporary runtime files                                                                                               |
 | `/var/cache`      | temporarily cached files for running software, package manager lists                                                       |
-| `/var/log` | system log files                                                                                                           |
+| `/var/log`        | system log files                                                                                                           |
 
 Everything is a file on Unix, even devices (found under `/dev`).
 
@@ -139,125 +139,149 @@ Common switches are `-h` / `--help`, `-v` / `--verbose`, `-V` / `--version`. The
 
 For more detailed help, type `man <command>`. To search for manual pages run `man -k <command>`.
 
-| Directory    | Description                                                                                                                                                                                                                                                   |
-|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `pwd`        | shows present working directory                                                                                                                                                                                                                               |
-| `cd`         | change directory, `cd -` to jump to last directory, `cd` without args to jump to `$HOME` directory                                                                                                                                                            |
-| `ls -l`      | list files and directories                                                                                                                                                                                                                                    |
-| `echo`       | prints a given string argument to standard output                                                                                                                                                                                                                                |
-| `cp`         | copies files or directories                                                                                                                                                                                                                                   |
-| `mv`         | moves files or directories                                                                                                                                                                                                                                    |
-| `cat`        | reads the contents of the file or standard input to standard output, your terminal if not redirected or piped to another command                                                                                                                              |
-| `head`       | reads the first N lines of a file or standard input                                                                                                                                                                                                           |
-| `tail`       | reads the last N lines of a file or standard input                                                                                                                                                                                                            |
-| `more`       | a paging program that displays one screenfull at a time and allows you to scroll down through longer outputs such as standard output from piped commands or files                                                                                             |
-| `less`       | a better replacement of `more` that allows you to scroll upwards as well as downwards                                                                                                                                                                         |
-| `>`          | overwrite file                                                                                                                                                                                                                                                |
-| `>>`         | append file                                                                                                                                                                                                                                                   |
-| `clear`      | clears the terminal screen, leaving your cursor at the top (`ctrl-l` is a shortcut)                                                                                                                                                                           |
-| `tmux`       | terminal multiplexer - runs multiple shells in your terminal window and preserves your shell sessions if your terminal crashes or is accidentally closed                                                                                                      |
-| `nohup`      | no hang up - lets a command keep running even if your shell is closed eg. broken ssh connection (this usually results in a HUP signal being sent to the process causing it to exit otherwise)                                                                 |
-| `which`      | shows the full path to a given command                                                                                                                                                                                                                       |
-| `type`       | similar to `which` but finds shell built-in commands                                                                                                                                                                                                          |
-| `ps`         | shows running processes. Commonly called as `ps -ef` or `ps aux` to show all processes on a unix based system                                                                                                                                                 |
-| `grep`       | filters from standard input or a file and only prints to standard output lines that match the given regex filter argument                                                                                                                                     |
-| `pbcopy`     | copies Standard Input to the GUI clipboard on Mac                                                                                                                                                                                                             |
-| `pbpaste`    | pastes the GUI clipboard to Standard Output on Mac                                                                                                                                                                                                            |
-| `xclip`      | copies Standard Input to the GUI (X) clipboard on Linux                                                                                                                                                                                                       |
-| `mkdir`      | creates a directory                                                                                                                                                                                                                                           |
-| `rmdir`      | deletes an empty directory, fails with an error if not empty, in which case you need to use `rm -r` to also delete the directory and its contents (files / subdirectories)                                                                                    |
-| `rm`         | deletes files / directories. Common switches are `-r` to recursively delete into directories, and `-f`/`--force`                                                                                                                                              |
-| `tr`         | replaces characters from standard input                                                                                                                                                                                                                       |
-| `sed`        | stream editor - replaces strings or deletes from standard input via regex searches                                                                                                                                                                            |
-| `awk`        | text processing language, usually used for quick one-liners, also supports regex matches, can print numbered columns                                                                                                                                          |
-| `cut`        | cuts out selected portions of each line by bite, character or field eg. 1st and 3rd fields `cut -d ' ' -f 1,3`                                                                                                                                                |
-| `column`     | aligns input into vertically aligned columns, usually called as `column -t`                                                                                                                                                                                   |
-| `df`         | disk free - shows disk space for one or all disks eg. `df -h` for human units, `df -h /` for disk space of root disk or `df -h .` for disk space in the current partition where you are (`$PWD`)                                                              |
-| `env`        | shows environment variables or sets environment variables and runs commands                                                                                                                                                                                  |
-| `set`        | sets shell options such as `set -e` (usually used in scripts), or without args shows everything defined in the shell such as environment variables, aliases and functions                                                                                    |
-| `vi`         | text editor, the classic Unix terminal text editor, doesn't require a GUI, almost universally available on every server. If you need to edit a config file on a server, you will need to use this or another terminal editor program                          |
-| `strace`     | traces system calls and signals, eg. file open / read / close, network socket open / send / close                                                                                                                                                             |
-| `dtruss`     | similar to `strace` but for Mac                                                                                                                                                                                                                               |
-| `dmesg`      | shows system kernel logs                                                                                                                                                                                                                                     |
-| `journalctl` | opens systemd logs                                                                                                                                                                                                                                            |
-| `diff`       | compares files line by line, shows the differing lines                                                                                                                                                                                                       |
-| `date`       | shows date and time, sets date and time, or shows the date / time in the format specified by a strftime string                                                                                                                                              |
-| `rsync`      | transfers / synchronizes files or directories efficiently between two directories by comparing timestamps (or optionally checksums) and only copies the files that are newer than the destination                                                             |
-| `find`       | finds files and directories, optionally perform commands on them, eg. `find . -name README.md`                                                                                                                                                                |
-| `xargs`      | reads standard input and uses it as arguments to the given command eg. `\| xargs <command>`                                                                                                                                                                   |                                                                                                                                            |
-| `file`       | shows the type of a given file eg. `ASCII text` or `POSIX tar archive`                                                                                                                                                                                        |
-| `tar`        | creates or extracts tarballs (bundle archives of files / directories), usually used for backups eg. `tar cvfz my.tar.gz somedirectory` and `tar xvfz my.tar.gz`                                                                                               |
+| Command      | Description                                                                                                                                                                                                                                 |
+|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `echo`       | prints a given string argument to standard output                                                                                                                                                                                           |
+| `clear`      | clears the terminal screen, leaving your cursor at the top (`ctrl-l` is a shortcut)                                                                                                                                                         |
+| `tmux`       | terminal multiplexer - runs multiple shells in your terminal window and preserves your shell sessions if your terminal crashes or is accidentally closed                                                                                    |
+| `which`      | shows the full path to a given command                                                                                                                                                                                                      |
+| `type`       | similar to `which` but finds shell built-in commands                                                                                                                                                                                        |
+| `grep`       | filters from standard input or a file and only prints to standard output lines that match the given regex filter argument                                                                                                                   |
+| `pbcopy`     | copies Standard Input to the GUI clipboard on Mac                                                                                                                                                                                           |
+| `pbpaste`    | pastes the GUI clipboard to Standard Output on Mac                                                                                                                                                                                          |
+| `xclip`      | copies Standard Input to the GUI (X) clipboard on Linux                                                                                                                                                                                     |
+| `env`        | shows environment variables or sets environment variables and runs commands                                                                                                                                                                 |
+| `set`        | sets shell options such as `set -e` (usually used in scripts), or without args shows everything defined in the shell such as environment variables, aliases and functions                                                                   |
+| `diff`       | compares files line by line, shows the differing lines                                                                                                                                                                                      |
+| `date`       | shows date and time, sets date and time, or shows the date / time in the format specified by a strftime string                                                                                                                              |
+| `rsync`      | transfers / synchronizes files or directories efficiently between two directories by comparing timestamps (or optionally checksums) and only copies the files that are newer than the destination                                           |
+| `find`       | finds files and directories, optionally perform commands on them, eg. `find . -name README.md`                                                                                                                                              |
+| `xargs`      | reads standard input and uses it as arguments to the given command eg. `\| xargs <command>`                                                                                                                                                 |                                                                                                                                            |
+| `file`       | shows the type of a given file eg. `ASCII text` or `POSIX tar archive`                                                                                                                                                                      |
+| `tar`        | creates or extracts tarballs (bundle archives of files / directories), usually used for backups eg. `tar cvfz my.tar.gz somedirectory` and `tar xvfz my.tar.gz`                                                                             |
+
+#### File System
+
+| Command   | Description                                                                                                                                                                |
+|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `pwd`     | shows present working directory                                                                                                                                            |
+| `cd`      | change directory, `cd -` to jump to last directory, `cd` without args to jump to `$HOME` directory                                                                         |
+| `ls -l`   | list files and directories                                                                                                                                                 |
+| `cp`      | copies files or directories                                                                                                                                                |
+| `mv`      | moves files or directories                                                                                                                                                 |
+| `rm`      | deletes files / directories. Common switches are `-r` to recursively delete into directories, and `-f`/`--force`                                                           |
+| `mkdir`   | creates a directory                                                                                                                                                        |
+| `rmdir`   | deletes an empty directory, fails with an error if not empty, in which case you need to use `rm -r` to also delete the directory and its contents (files / subdirectories) |
+| `chown`   | change ownership of files or directories                                                                                                                                   |
+| `chgrp`   | change group ownership of files or directories                                                                                                                             |
+| `chmod`   | change file octal permissions eg. `chmod 755`                                                                                                                               |
+| `cat`     | reads the contents of the file or standard input to standard output, your terminal if not redirected or piped to another command                                           |
+| `head`    | reads the first N lines of a file or standard input                                                                                                                        |
+| `tail`    | reads the last N lines of a file or standard input                                                                                                                         |
+| `more`    | a paging program that displays one screenfull at a time and allows you to scroll down through longer outputs such as standard output from piped commands or files          |
+| `less`    | a better replacement of `more` that allows you to scroll upwards as well as downwards                                                                                      |
+| `tree`    | lists contents of directories in a tree-like format                                                                                                                        |
+| `>`       | overwrite file                                                                                                                                                             |
+| `>>`      | append file                                                                                                                                                                |
+
+#### String Processing
+
+| Command  | Description                                                                                                                                                                                                                          |
+|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `tr`     | replaces characters from standard input                                                                                                                                                                                              |
+| `sed`    | stream editor - replaces strings or deletes from standard input via regex searches                                                                                                                                                   |
+| `awk`    | text processing language, usually used for quick one-liners, also supports regex matches, can print numbered columns                                                                                                                 |
+| `cut`    | cuts out selected portions of each line by bite, character or field eg. 1st and 3rd fields `cut -d ' ' -f 1,3`                                                                                                                       |
+| `column` | aligns input into vertically aligned columns, usually called as `column -t`                                                                                                                                                          |
+| `vi`     | text editor, the classic Unix terminal text editor, doesn't require a GUI, almost universally available on every server. If you need to edit a config file on a server, you will need to use this or another terminal editor program |
+| `vim`    | `vi` improved - fuller features replacement editor to `vi`. `vi` is more commonly available on minimalist systems such as some servers but `vim` package is available to install                                                     |
 
 #### User Management
 
-| Directory    | Description                                                                                                                                                                                                                                                   |
-|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `sudo`       | elevate permissions to another user, usually root (must be pre-approved in `/etc/sudoers`)                                                                                                                                                                    |
-| `su`         | switch user, prompts for the user's password to start a new shell under their username                                                                                                                                                                        |
-| `useradd`    | creates a new user account                                                                                                                                                                                                                                    |
-| `userdel`    | deletes a user account                                                                                                                                                                                                                                        |
-| `id`         | shows the current or given user's UID, GID and group memberships                                                                                                                                                                                             |
-| `gpasswd`    | administers the /etc/group and /etc/gshadow                                                                                                                                                                                                                   |
-| `who` / `w`  | display who is logged in                                                                                                                                                                                                                                      |
+| Command     | Description                                                                                                                                                                                                                                             |
+|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `id`        | shows the current or given user's UID, GID and group memberships                                                                                                                                                                                        |
+| `who` / `w` | display who is logged in                                                                                                                                                                                                                                |
+| `sudo`      | assumes the permissions of `root` or a given `-u <user>` for the duration of the following command must be pre-approved in `/etc/sudoers`) conifiguration. Prompts for the current user's password and caches for subsequent `sudo` calls within 5 mins |
+| `su`        | switch user, defaults to `root` if no user arg is given. Prompts for the target user's password and starts a new shell as that user                                                                                                                     |
+| `useradd`   | creates a new user account                                                                                                                                                                                                                              |
+| `userdel`   | deletes a user account                                                                                                                                                                                                                                  |
+| `gpasswd`   | administers the /etc/group and /etc/gshadow                                                                                                                                                                                                             |
 
 #### Process Management
 
-| Directory | Description                                                                    |
-|-----------|--------------------------------------------------------------------------------|
-| `ctrl-z`  | suspend the current process                                                    |
-| `bg`      | background the suspended process                                               |
-| `fg`      | foreground the suspended process                                               |
-| `wait`    | waits for all background processes to finish before returning the shell prompt |
-| `kill`    | kills a process by PID or sends it a specific signal                           |
-| `killall` | same as above, by name                                                         |
-| `pkill`   | same as above, by regex pattern matching name                                  |
+| Command   | Description                                                                                                                                                                                   |
+|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `ctrl-z`  | suspend the current process                                                                                                                                                                   |
+| `ps`      | shows running processes. Commonly called as `ps -ef` or `ps aux` to show all processes on a unix based system                                                                                 |
+| `pgrep`   | finds processes by regex                                                                                                                                                                      |
+| `bg`      | background the suspended process                                                                                                                                                              |
+| `fg`      | foreground the suspended process                                                                                                                                                              |
+| `wait`    | waits for all background processes to finish before returning the shell prompt                                                                                                                |
+| `kill`    | kills a process by PID or sends it a specific signal                                                                                                                                          |
+| `killall` | same as above, by name                                                                                                                                                                        |
+| `pkill`   | same as above, by regex pattern matching name                                                                                                                                                 |
+| `nohup`   | no hang up - lets a command keep running even if your shell is closed eg. broken ssh connection (this usually results in a HUP signal being sent to the process causing it to exit otherwise) |
 
-#### Performance
+#### Performance & Space Management
 
-| Directory    | Description                                                                                                                                                                                                                                                   |
-|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `time`       | times how long a command takes                                                                                                                                                                                                                                |
-| `free`       | shows total used and free RAM eg. `free -h` for human readable units                                                                                                                                                                                          |
-| `top`        | shows live process information, usually sorted by CPU or RAM - most useful details are PID, CPU, RAM, USER and COMMAND                                                                                                                                        |
-| `du`         | disk used - counts the disk space used for given files or directories, eg. `du -h -s $HOME` to see how much space your home directory has taken in human-readable units eg. GB                                                                                |
-| `lsof`       | list open files open files and directories, the processes which currently have them opened, along with the user and PID                                                                                                                                       |
-| `vmstat`     | virtual memory stats - shows RAM, CPU, disk I/O etc.                                                                                                                                                                                                          |
-| `dstat`      | similar to `vmstat`                                                                                                                                                                                                                                           |
-| `lscpu`      | shows number of CPUs, cores etc.                                                                                                                                                                                                                              |
-| `nproc`      | the number of CPU cores available to the current process (could be less than the hardware if a limit has been applied to your user or process)                                                                                                                |
+| Command    | Description                                                                                                                                                                                             |
+|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `df`       | disk free - shows disk space for one or all disks eg. `df -h` for human units, `df -h /` for disk space of root disk or `df -h .` for disk space in the current partition where you are (`$PWD`)        |
+| `du`       | disk used - counts the disk space used for given files or directories, eg. `du -h -s $HOME` to see how much space your home directory has taken in human-readable units eg. GB                          |
+| `time`     | times how long a command takes                                                                                                                                                                          |
+| `free`     | shows total used and free RAM eg. `free -h` for human readable units                                                                                                                                    |
+| `top`      | shows live process information, usually sorted by CPU or RAM - most useful details are PID, CPU, RAM, USER and COMMAND                                                                                  |
+| `lsof`     | list open files open files and directories, the processes which currently have them opened, along with the user and PID                                                                                 |
+| `vmstat`   | virtual memory stats - shows RAM, CPU, disk I/O etc.                                                                                                                                                    |
+| `dstat`    | similar to `vmstat`                                                                                                                                                                                     |
+| `lscpu`    | shows number of CPUs, cores etc.                                                                                                                                                                        |
+| `nproc`    | the number of CPU cores available to the current process (could be less than the hardware if a limit has been applied to your user or process)                                                          |
 
 #### Networking
 
-| Directory    | Description                                                                                                                                                                                                                                                   |
+| Command      | Description                                                                                                                                                                                                                                                   |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `hostname`   | shows the hostname with domain (FQDN), use `-s` for short name without domain                                                                                                                                                                                |
-| `ifconfig`   | shows or configures network interfaces, usually used to show your IP address                                                                                                                                                                                 |
+| `hostname`   | shows the hostname with domain (FQDN), use `-s` for short name without domain                                                                                                                                                                                 |
+| `ifconfig`   | shows or configures network interfaces, usually used to show your IP address                                                                                                                                                                                  |
 | `ip`         | similar to `ifconfig`, `ip addr` to show your IP address                                                                                                                                                                                                      |
-| `route`      | shows or configures the network routing cables                                                                                                                                                                                                               |
-| `netstat`    | shows the network connections, connected or listening ports. Commonly called as `netstat -an` or `netstat -lntpu`                                                                                                                                            |
+| `route`      | shows or configures the network routing cables eg. `route -n`                                                                                                                                                                                                 |
+| `netstat`    | shows the network connections, connected or listening ports. Commonly called as `netstat -an` or `netstat -lntpu`                                                                                                                                             |
 | `host`       | performs DNS lookup for a given hostname or FQDN                                                                                                                                                                                                              |
-| `dig`        | same as above, returns more info                                                                                                                                                                                                                              |
+| `dig`        | similar to `host` but more query options and returns more info                                                                                                                                                                                                |
 | `curl`       | get a web page URL via HTTP(S) or send data eg. JSON to a web service in an HTTP(S) request                                                                                                                                                                   |
 | `wget`       | similar to curl, downloads web pages to local files by default, use `wget -O - ...` to output to stdout to emulate curl's behaviour on minimalist systems that don't have curl installed but have wget bundled inside the busybox shell, such as Alpine Linux |
+| `ssh`        | Secure Shell - connects to a remote server and opens a shell                                                                                                                                                                                                  |
+| `scp`        | Secure Copy - copies a file to remote server via SSH                                                                                                                                                                                                          |
+| `ssh-keygen` | generates an SSH public / private key pair for passwordless logins to remote ssh servers (see SSH section further down)                                                                                                                                       |
+
+#### Logging & Tracing
+
+| Command      | Description                                                                                        |
+|--------------|----------------------------------------------------------------------------------------------------|
+| `dmesg`      | shows system kernel logs                                                                           |
+| `journalctl` | opens systemd logs                                                                                 |
+| `strace`     | traces system calls and signals, eg. file open / read / close, network socket open / send / close  |
+| `dtruss`     | similar to `strace` but for Mac                                                                    |
 
 #### Compression
 
-| Directory    | Description                                                                                                                                |
-|--------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| `gzip`       | compresses files using the gzip compression algorithm, adds the `.gz` file extension                                                       |
-| `gunzip`     | decompresses `.gz` files                                                                                                                   |
-| `bzip2`      | compresses files using the bzip2 compression algorithm (more compression but slower)                                                       |
-| `bunzip2`    | decompresses `.bz2` files                                                                                                                  |
-| `zless`      | shows compressed or plain text files one screen at a time (pipes gzipped files through `gunzip` before opening in `less`)                  |
-| `bzless`     | same as `zless` but for `bzip2`                                                                                                            |
-| `zip`        | creates zip compression archives                                                                                                           |
-| `unzip`      | extracts zip compression archives                                                                                                          |
-| `md5sum`     | generates md5 hash of a file's contents, or validates that a saved md5 checksum hash matches the hash computed for a given file's contents |
-| `md5`        | same as above, on Mac                                                                                                                      |
-| `shasum`     | computes the SHA-1 hash of a file's contents (a hex string that is unique to a given content input)                                        |
-| `sha1sum`    | same as above, on Mac                                                                                                                      |
-| `sha256sum`  | same as above, with longer SHA-256 hash                                                                                                    |
-| `sha512sum`  | same as above, with longer SHA-512 hash                                                                                                    |
+| Command     | Description                                                                                                                                |
+|-------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| `gzip`      | compresses files using the gzip compression algorithm, adds the `.gz` file extension                                                       |
+| `gunzip`    | decompresses `.gz` files                                                                                                                   |
+| `bzip2`     | compresses files using the bzip2 compression algorithm (more compression but slower)                                                       |
+| `bunzip2`   | decompresses `.bz2` files                                                                                                                  |
+| `zless`     | shows compressed or plain text files one screen at a time (pipes gzipped files through `gunzip` before opening in `less`)                  |
+| `bzless`    | same as `zless` but for `bzip2`                                                                                                            |
+| `zip`       | creates zip compression archives                                                                                                           |
+| `unzip`     | extracts zip compression archives                                                                                                          |
+| `md5sum`    | generates md5 hash of a file's contents, or validates that a saved md5 checksum hash matches the hash computed for a given file's contents |
+| `md5`       | same as above, on Mac                                                                                                                      |
+| `shasum`    | computes the SHA-1 hash of a file's contents (a hex string that is unique to a given content input)                                        |
+| `sha1sum`   | same as above, on Mac                                                                                                                      |
+| `sha256sum` | same as above, with longer SHA-256 hash                                                                                                    |
+| `sha512sum` | same as above, with longer SHA-512 hash                                                                                                    |
 
 ## Networking Basics
 
@@ -293,10 +317,17 @@ For more detailed help, type `man <command>`. To search for manual pages run `ma
 | Port Forwarding                            | opens a port number on a layer 4 firewall to permit outside traffic to flow into a computer in the internal network eg. forward port 80 to a webserver behind the firewall                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Load Balancer                              | accepts traffic on a given port and forwards it to one of several servers, therefore spreading the load of multiple inbound connections between a preconfigured group of servers eg. a web farm. This allows a website to scale to millions of users by allowing many servers to answer HTTP requests. It also allows for high availibility because if any one webserver crashes, it will send traffic to the remaining webservers and not the broken one. It detects if any server in the web farm is broken by using a preconfigured health check, usually a HTTP request with an optional `/path` which it repeats every few seconds to detect if a webserver stops responding properly, in which case it marks it as failed until the webserver starts working properly and the health check passes |
 
+#### IPv4 Address Format
+
 ![IPv4 address format](https://media.fs.com/images/community/upload/kindEditor/202110/07/ipv4-adress-1633571300-dsz7s7aL9Q.png)
+
+#### IPv6 Address Format
+
 ![IPv6 address format](https://media.fs.com/images/community/upload/kindEditor/202110/07/ipv6-address-1633571321-vaS1xaeWr9.png)
 
-![.](https://signal.avg.com/hs-fs/hubfs/Blog_Content/Avg/Signal/AVG%20Signal%20Images/Public%20vs.%20local%20IP%20addresses%20(Signal)/Public-vs-local-IP-addresses.png?width=2640&name=Public-vs-local-IP-addresses.png)
+#### NAT diagram - Network Address Translation
+
+![NAT](https://signal.avg.com/hs-fs/hubfs/Blog_Content/Avg/Signal/AVG%20Signal%20Images/Public%20vs.%20local%20IP%20addresses%20(Signal)/Public-vs-local-IP-addresses.png?width=2640&name=Public-vs-local-IP-addresses.png)
 
 Find your public IP address via any of these commands:
 
@@ -374,20 +405,24 @@ of each other's changes as long as they're not on the same lines.
 
 ### Git Commands
 
-| Command         | Description                                                                                                           |
-|-----------------|-----------------------------------------------------------------------------------------------------------------------|
-| `git init`      | creates a new Git repository (creates `.git/` directory storing your file changes and metadata)                       |
-| `git clone`     | clones a repo locally from an upstream server, such as GitHub                                                         |
-| `git add`       | marks files to be committed                                                                                           |
-| `git mv`        | moves or renames files (necessary for Git to track the move or rename, don't just use Unix `mv`)                      |
-| `git diff`      | shows you uncommitted changes made to files                                                                           |
-| `git commit`    | saves selected changed files in a new version hashref (a unique alphanumeric string representing this set of changes) |
-| `git push`      | pushes your local commits to an upstream shared repository such as GitHub                                             |
-| `git pull`      | pulls the latest commits from the upstream shared repository                                                          |
-| `git branch`    | show branches / create a new branch                                                                                   |
-| `git checkout`  | checks out the files at a given ref (branch / tag / hashref)                                                          |
-| `git merge`     | merges a given branch into the current branch                                                                         |
-| `git remote -v` | shows the remote repos and their URLs                                                                                |
+| Command         | Description                                                                                                                                                           |
+|-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `git init`      | creates a new Git repository (creates `.git/` directory storing your file changes and metadata)                                                                       |
+| `git clone`     | clones a repo locally from an upstream server, such as GitHub                                                                                                         |
+| `git add`       | marks files to be committed                                                                                                                                           |
+| `git mv`        | moves or renames files (necessary for Git to track the move or rename, don't just use Unix `mv`)                                                                      |
+| `git diff`      | shows you uncommitted changes made to files                                                                                                                           |
+| `git commit`    | saves selected changed files in a new version hashref (a unique alphanumeric string representing this set of changes)                                                 |
+| `git push`      | pushes your local commits to an upstream shared repository such as GitHub                                                                                             |
+| `git pull`      | pulls the latest commits from the upstream shared repository                                                                                                          |
+| `git branch`    | show branches / create a new branch                                                                                                                                   |
+| `git checkout`  | checks out the files at a given ref (branch / tag / hashref)                                                                                                          |
+| `git merge`     | merges a given branch into the current branch                                                                                                                         |
+| `git tag`       | creates a tag for the current commit hashref easy to use human name or version number eg. v1.2.3                                                                      |
+| `git log`       | shows the git log eg. `git log --all --graph --decorate` to see multi-branch history merges etc. or `git log -p` to see the patch diffs of each commit in the history |
+| `git show`      | shows the diff at a specific commit                                                                                                                                   |
+| `git config`    | configures settings for the local repo or global user settings eg. `git config --global user.name` or `git cnofig --global user.email`                                |
+| `git remote -v` | shows the remote repos and their URLs                                                                                                                                 |
 
 `.gitignore` - file listing paths to ignore, one per line, can be set globally in your home directory or in the root top level directory of the repository
 
@@ -578,8 +613,8 @@ Benefits of virtual machines include:
 
 ## Data Formats
 
-| Format | Description |
-| -------|-------------|
-|[YAML](https://en.wikipedia.org/wiki/YAML) | Yet Another Markup Language - simple way of representing key value pairs, lists, dictionaries. Usually used for config files eg. [readme-lint.yaml](https://github.com/MayaSekhon/DevOps-Tutorial/blob/main/.github/workflows/readme-lint.yaml) |
-|[JSON](https://en.wikipedia.org/wiki/JSON) | JavaScript Object Notation - text-based data file written like a dictionary in code with braces, key-value pairs, lists, often used for data interchange between web services eg. `{ "name": "Maya", "hobbies": ["coding", "music"] }` |
-|[XML](https://en.wikipedia.org/wiki/XML) | Extensible Markup Language - text-based data file with a start \<tag\> and end \</tag\> (with a slash) surrounding each field eg. `<name>Maya</name>`, older format used for data interchange in older web services |
+| Format                                     | Description                                                                                                                                                                                                                                     |
+|--------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [YAML](https://en.wikipedia.org/wiki/YAML) | Yet Another Markup Language - simple way of representing key value pairs, lists, dictionaries. Usually used for config files eg. [readme-lint.yaml](https://github.com/MayaSekhon/DevOps-Tutorial/blob/main/.github/workflows/readme-lint.yaml) |
+| [JSON](https://en.wikipedia.org/wiki/JSON) | JavaScript Object Notation - text-based data file written like a dictionary in code with braces, key-value pairs, lists, often used for data interchange between web services eg. `{ "name": "Maya", "hobbies": ["coding", "music"] }`          |
+| [XML](https://en.wikipedia.org/wiki/XML)   | Extensible Markup Language - text-based data file with a start \<tag\> and end \</tag\> (with a slash) surrounding each field eg. `<name>Maya</name>`, older format used for data interchange in older web services                             |
