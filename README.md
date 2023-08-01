@@ -13,11 +13,20 @@
 
 ## Index
 
+- [DevOps Intro](#devops-intro)
 - [Linux / Unix Basics](#linux--unix-basics)
   - [Unix File System Layout](#unix-file-system-layout)
   - [Unix Shells](#unix-shells)
   - [Standard Input, Standard Output and Standard Error](#standard-input-standard-output-and-standard-error)
 - [Linux / Unix - Basic Commands](#linux--unix---basic-commands)
+  - [File System](#file-system)
+  - [String Processing](#string-processing)
+  - [User Management](#user-management)
+  - [Process Management](#process-management)
+  - [Performance & Space Management](#performance--space-management)
+  - [Networking](#networking)
+  - [Logging & Tracing](#logging--tracing)
+  - [Compression](#compression)
 - [Networking Basics](#networking-basics)
 - [SSH](#ssh)
 - [Editor / IDE](#editor--ide)
@@ -33,6 +42,8 @@
   - [CircleCI](#circleci)
   - [Travis CI](#travis-ci)
   - [Jenkins](#jenkins)
+- [Virtualization](#virtualization)
+  - [Popular Virtualization Software](#popular-virtualization-software)
 - [Data Formats](#data-formats)
 
 ## DevOps Intro
@@ -325,15 +336,15 @@ For more detailed help, type `man <command>`. To search for manual pages run `ma
 | Port Forwarding                            | opens a port number on a layer 4 firewall to permit outside traffic to flow into a computer in the internal network eg. forward port 80 to a webserver behind the firewall                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Load Balancer                              | accepts traffic on a given port and forwards it to one of several servers, therefore spreading the load of multiple inbound connections between a preconfigured group of servers eg. a web farm. This allows a website to scale to millions of users by allowing many servers to answer HTTP requests. It also allows for high availibility because if any one webserver crashes, it will send traffic to the remaining webservers and not the broken one. It detects if any server in the web farm is broken by using a preconfigured health check, usually a HTTP request with an optional `/path` which it repeats every few seconds to detect if a webserver stops responding properly, in which case it marks it as failed until the webserver starts working properly and the health check passes |
 
-#### IPv4 Address Format
+IPv4 Address Format:
 
 ![IPv4 address format](https://media.fs.com/images/community/upload/kindEditor/202110/07/ipv4-adress-1633571300-dsz7s7aL9Q.png)
 
-#### IPv6 Address Format
+IPv6 Address Format:
 
 ![IPv6 address format](https://media.fs.com/images/community/upload/kindEditor/202110/07/ipv6-address-1633571321-vaS1xaeWr9.png)
 
-#### NAT diagram - Network Address Translation
+NAT - Network Address Translation:
 
 ![NAT](https://signal.avg.com/hs-fs/hubfs/Blog_Content/Avg/Signal/AVG%20Signal%20Images/Public%20vs.%20local%20IP%20addresses%20(Signal)/Public-vs-local-IP-addresses.png?width=2640&name=Public-vs-local-IP-addresses.png)
 
