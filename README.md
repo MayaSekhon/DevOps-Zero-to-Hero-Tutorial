@@ -35,6 +35,22 @@
   - [Jenkins](#jenkins)
 - [Data Formats](#data-formats)
 
+## DevOps Intro
+
+DevOps is short for Development Operations. It's a multi-disciplinary field combining programming and
+infrastructure to automate and speed up delivery of software.
+
+DevOps refers both to the wide variety of tools used, the engineers who operate them and to the methodology of closer collaboration between infrastructure and
+software engineering teams for quicker iterations.
+
+In the real world, DevOps practitioners typically come from a Linux background and favour open-source technologies which
+are free, to skip the need for licensing or paperwork such as purchase orders.
+Proprietary paid for software tools are used when no free alternatives are good enough. Cloud computing, although proprietary,
+is heavily underpinned by open-source technologies such that many of the open-source tools work the same and
+the compute-on-demand pay-as-you-go model means lower capex at the expense of higher opex and convenience.
+
+<img src="https://octopus.com/devops/i/x/octopus-devops-infinity.png" width=600 height=300>
+
 ## Linux / Unix Basics
 
 Linux is the standard open source operating system, based on Unix design.
@@ -256,6 +272,47 @@ For more detailed help, type `man <command>`. To search for manual pages run `ma
 - Domain Name - the address suffix used to group websites and email addresses eg. google.com
 - FQDN - Fully Qualified Domain Name - the complete host name and domain address eg. www.google.com
 - URL - Uniform Resource Locator - the full path to a website's webpage eg. https://linkedin.com/in/maya-sekhon
+- TCP - Transmission Control Protocol - connection-based protocol, retransmits lost packets, delivers in sequence, used underneath many other protocols eg. HTTP, SSH
+- UDP - User Datagram Protocol - connectionless protocol, less reliable but lower overhead so faster, doesn't detect packet loss or retransmit or guarantee sequence order.
+Apps have to manage packet loss and retries themselves. DNS is an example of a UDP-based protocol where the DNS client software retries itself.
+Other examples include NFS, Video streaming, VoIP (Voice over IP)
+- IP - Internet Protocol - the standard for addressing internet connected devices and routing packets between them.
+- IPv4 - the most widely used version of IP with 32-bit addresses usually written in 4 octet format from 0 - 255
+eg. 4.2.2.1 or 192.168.1.10. There are ~4.3 billion IPv4 addresses (which are running out)
+- IPv6 - newer format with more IP addresses available due to 128-bit format written in hexadecimal separated by colons.
+Used because IPv4 only has 4 billion IP addresses which are running out.
+- Public vs Private IPs - in IPv4, due to limited IPs, three address ranges are reserved for private local network use only.
+One of these three ranges are used for all home and local office networks. Communicating on the internet requires a public IP.
+  - Private IP address ranges are as follows:
+    - Class A Private IP Range: 10.0.0.0/8 ie. 10.0.0.0 – 10.255.255.255
+    - Class B Private IP Range: 172.168.0.0/12 ie. 172.16.0.0 – 172.31.255.255
+    - Class C Private IP Range: 192.168.0.0/16 ie. 192.168.0.0 – 192.168.255.255
+- CIDR - Classless Inter-Domain Routing - short way of representing a network combining an IP / netmask bits eg.
+10.0.0.0 and 255.0.0.0 as 10.0.0.0/8 where the 8 represents an 8-bit netmask which is the same as 255.0.0.0
+- NAT - Network Address Translation - local router converts your local devices private IP address to the public IP
+of the router before sending on to the internet so that servers can reply to the router which forwards the IP packets back to the local device on its private IP
+- Static vs Dynamic IPs - IP addresses can be configured manually or automatically via DHCP
+- DHCP - Dynamic Host Configuration Protocol - client device broadcasts requesting an IP address using its DHCP client software.
+DHCP server hears the broadcast and replies with an IP address from its pool of configured IP addresses that the client device can use with a lease duration of typically 24 hours.
+After 24 hours, if the device is still online, it'll request to renew the lease, otherwise the lease will expire and the IP will be returned to the DHCP pool of available addresses
+- MAC address - Media Access Control address - the physical network address on the network card, hardcoded, can be overridden in software
+- OSI model - Open Systems Interconnection - seven-layer reference for resposibilities of each component in networking
+- Firewall - restricts traffic inbound / outbound to protect computers from untrusted networks. Layer 4 firewalls restrict based on IP + Port number combinations.
+Layer 7 firewalls filter based on application layer protocol knowledge such as HTTP / paths or protocol abuses
+- Web Application Firewall - layer 7 firewall that understands HTTP traffic and blocks common attacks and protocol abuses such as SQL injection
+- NAT Firewall - layer 4 firewall that permits outbound and matching replies only. Maintains a connection table in RAM of source IP:port and destination IP:port combinations
+so that only matching replies are permitted back into the network to the requesting source computer
+- Port forwarding - opens a port number on a layer 4 firewall to permit outside traffic to flow into a computer in the internal network eg. forward port 80 to a webserver behind the firewall
+- Load Balancer - accepts traffic on a given port and forwards it to one of several servers, therefore spreading the load of multiple inbound connections between a preconfigured group of servers eg. a web farm.
+This allows a website to scale to millions of users by allowing many servers to answer HTTP requests. It also allows for high availibility because if any one webserver crashes, it will send traffic to the remaining webservers and not the broken one.
+It detects if any server in the web farm is broken by using a preconfigured healthcheck,
+usually a HTTP request with an optional `/path` which it repeats every few seconds to detect if a webserver stops responding properly,
+in which case it marks it as failed until the webserver starts working properly and the health check passes
+
+![IPv4 address format](https://media.fs.com/images/community/upload/kindEditor/202110/07/ipv4-adress-1633571300-dsz7s7aL9Q.png)
+![IPv6 address format](https://media.fs.com/images/community/upload/kindEditor/202110/07/ipv6-address-1633571321-vaS1xaeWr9.png)
+
+![.](https://signal.avg.com/hs-fs/hubfs/Blog_Content/Avg/Signal/AVG%20Signal%20Images/Public%20vs.%20local%20IP%20addresses%20(Signal)/Public-vs-local-IP-addresses.png?width=2640&name=Public-vs-local-IP-addresses.png)
 
 Find your public IP address via any of these commands:
 
